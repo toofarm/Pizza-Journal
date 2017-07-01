@@ -1,0 +1,303 @@
+    $darkOrange: rgba(255, 176, 66, 1);
+    $superDarkOrange: rgba(222, 153, 57, 1);
+    $bodyTan: rgba(255, 227, 189, 1);
+    $lightTan: rgba(255, 202, 128, 1);
+    $lightGrey: #DDDDDD;
+    $darkGrey: #666666;
+    $headFont: 'Lato',
+    'sans-serif';
+    $bodyFont: 'Abel',
+    'sans-serif';
+
+    @mixin plusStyle ($color, $size) {
+        color: $color;
+        font-size: $size;
+    }
+
+@mixin pizzaCard {
+    border: 3px solid $superDarkOrange;
+    background-color: $lightTan;
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+@mixin pizzaPhoto {
+    height: 230px;
+    width: 230px;
+    border: 2px solid $lightGrey;
+    border-radius: 150px;
+    background-image: url(Assets/pizzaPic.jpg);
+    background-size: cover;
+    margin: 10px;
+}
+
+
+    body {
+        background-color: $bodyTan;
+        margin: 0px;
+        height: auto;
+    }
+
+    #navSmall {
+        background-color: $superDarkOrange;
+        height: 50px;
+        font-family: $headFont;
+        font-size: 25px;
+        border: 0px;
+        width: 100%;
+        position: fixed;
+        display: none;
+        box-shadow: 10px 0px 5px #888;
+        z-index: 4;
+
+        form {
+            margin-left: 7%;
+            margin-top: 0px;
+            input {
+                font-size: 20px;
+            }
+            button {
+                font-size: 15px;
+            }
+        }
+
+        .navbar-header {
+            position: absolute;
+            width: auto;
+            display: inline-block;
+        }
+
+        .navbar-brand > img {
+            height: 65px;
+            width: auto;
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: -20px;
+        }
+
+        .navbar-nav {
+            float: right;
+            position: absolute;
+            margin-left: 80%;
+            .myActive {
+                background-color: $darkOrange;
+            }
+            li a {
+                color: #fff;
+                text-align: center;
+                height: auto;
+                height: 50px;
+            }
+        }
+    }
+
+    #navLarge {
+        background-color: $darkOrange;
+        height: 100px;
+        font-family: $headFont;
+        font-size: 30px;
+        border: 0px;
+        width: 100%;
+        padding-top: 30px;
+        display: inline-block;
+        padding: 30px 10px 0px 0px;
+        z-index: 5;
+
+        form {
+            margin-top: 0px;
+            input {
+                font-size: 20px;
+            }
+            button {
+                font-size: 15px;
+                margin-top: 8px;
+            }
+        }
+
+        .navbar-header {
+            width: 170px;
+            margin-left: 44%;
+            margin-right: 50%;
+            display: inline-block;
+        }
+
+        .navbar-brand > img {
+            height: 150px;
+            width: auto;
+            display: inline-block;
+            margin-left: -26px;
+        }
+
+        .navbar-nav {
+            display: inline-block;
+            float: right;
+            margin-top: -171px;
+            .myActive {
+                background-color: $superDarkOrange;
+            }
+            th {
+                padding: 15px;
+            }
+            th a {
+                color: #fff;
+                text-align: center;
+                padding-bottom: 34px;
+            }
+            th a:hover {
+                color: $lightGrey;
+                text-decoration: none;
+            }
+        }
+    }
+
+    #logoBacker {
+        background-color: #fff;
+        height: 170px;
+        width: 170px;
+        border-radius: 170px;
+        border: 1px solid black;
+        display: inline-block;
+    }
+
+    #mainSearch {
+        margin-top: 5px;
+    }
+
+    #mainContent {
+        z-index: 3;
+        margin-top: 105px;
+        height: auto;
+
+        .profile {
+            border-right: 2px solid black;
+            height: auto;
+            overflow: visible;
+            position: relative;
+
+            .userPhoto {
+                height: 150px;
+                width: 150px;
+                border-radius: 100px;
+                border: 4px solid $lightGrey;
+                top: 8px;
+                overflow: hidden;
+                background-image: url(Assets/darthvader.jpg);
+                background-size: cover;
+            }
+
+            #pizzaScoreContainer {
+                float: right;
+                margin-top: -150px;
+
+                h3 {
+                    color: $darkGrey;
+                    font-family: $headFont;
+                    margin: 0px 0px;
+                    font-size: 30px;
+                    right: 20px;
+                    top: 15px;
+                }
+
+                .pizzaCounter {
+                    width: 150px;
+                    height: 90px;
+                    border-radius: 10px;
+                    background-color: rgba(255, 176, 66, .7);
+                    border: 2px solid $superDarkOrange;
+                    top: 52px;
+                    right: 20px;
+                    padding: 5px;
+
+                    .pizzaNum {
+                        font-size: 50px;
+                        color: #fff;
+                        position: absolute;
+                        left: 230px;
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 40px;
+                font-family: $headFont;
+                color: $superDarkOrange;
+                top: 160px;
+            }
+
+            .bioText {
+                top: 245px;
+                font-family: $bodyFont;
+                border-left: 3px solid $darkGrey;
+                font-size: 25px;
+                padding: 0px 20px;
+            }
+            .cardAddBtn {
+                width: 200px;
+                height: 100px;
+                background-color: $lightGrey;
+                border: 3px solid $darkGrey;
+                border-radius: 10px;
+                margin-top: 15px;
+                .addBtnTxt {
+                    color: $darkGrey;
+                    width: 120px;
+                    float: right;
+                    position: relative;
+                    text-align: center;
+                    padding: 6px;
+                    font-size: 21px;
+                    margin-top: 10px;
+                }
+                i {
+                    @include plusStyle($darkGrey, 54px);
+                    margin: 20px 0px 0px 20px;
+                }
+            }
+            .cardAddBtn:hover {
+                background-color: $darkGrey;
+                border: 3px solid $lightGrey;
+                cursor: pointer;
+                i {
+                    @include plusStyle($lightGrey, 54px);
+                }
+                .addBtnTxt {
+                    color: $lightGrey;
+                }
+            }
+        }
+
+        #cardCol {
+            padding-left: 20px;
+
+            .orderToggle {
+                margin-top: -17px;
+
+                .sortActive {
+                    color: $darkGrey;
+                }
+            }
+            
+            #date:hover,
+            #tasty:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        
+        .pizzaCard {
+            @include pizzaCard;
+            .pizzaPhoto {
+                @include pizzaPhoto;
+            }
+            h2 {
+                font-family: $headFont;
+                position: absolute;
+                top: 40px;
+                left: 300px;
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+

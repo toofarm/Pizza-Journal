@@ -1,0 +1,65 @@
+@media (max-width: 1024px) {
+  #navSmall .navbar-brand img {
+    margin-left: -25px; }
+  #navSmall .navbar-nav {
+    margin-left: 70%; } }
+@media (max-width: 768px) {
+  #navLarge .navbar-header {
+    margin-left: 41%;
+    margin-top: -75px; }
+    #navLarge .navbar-header img {
+      height: 110px;
+      margin: -8px 0px 0px -25px; }
+  #navLarge #logoBacker {
+    height: 120px;
+    width: 120px; }
+  #navLarge form {
+    margin-left: 15px; }
+    #navLarge form input {
+      width: 180px; }
+  #navLarge .navbar-nav {
+    margin-top: -141px; } }
+@media (max-width: 667) {
+  #navLarge .navbar-nav {
+    margin: -156px 0px 0px -40px; } }
+@media (max-width: 736px) {
+  #navLarge {
+    height: 130px; }
+    #navLarge .navbar-header {
+      margin-right: 0px; }
+    #navLarge .navbar-form {
+      border: 0px; }
+      #navLarge .navbar-form form {
+        margin-left: 10px;
+        padding: 0px;
+        width: 500px; }
+        #navLarge .navbar-form form input {
+          width: 230px; }
+        #navLarge .navbar-form form button {
+          padding-left: 220px;
+          font-size: 30px; }
+    #navLarge .navbar-nav {
+      margin: -86px 0px 0px -10px; } }
+@media (max-width: 414px) {
+  #navLarge {
+    height: 200px; }
+    #navLarge .navbar-header {
+      margin-top: -37px;
+      margin-left: 36%; }
+    #navLarge .navbar-nav {
+      position: relative;
+      width: 70%;
+      margin: -282px 10%; }
+    #navLarge form {
+      width: 250px;
+      margin: 60px 0px 0px 45px; }
+      #navLarge form button {
+        margin: -95px 0px 0px 190px; } }
+@media (max-width: 360px) {
+  #navLarge .navbar-nav {
+    font-size: 25px;
+    position: relative;
+    width: 70%;
+    margin: -282px 7%; } }
+
+/*# sourceMappingURL=mediaStyles.css.map */
