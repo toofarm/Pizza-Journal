@@ -21,7 +21,7 @@
             
             .userPhoto {
                 position: absolute;
-                bottom: 5px;
+                bottom: -10px;
                 right: 25%;
             }
 
@@ -29,6 +29,19 @@
                 position: absolute;
                 bottom: 20px;
                 right: 5%;
+            }
+        }
+    }
+    
+    footer {
+        #footR {
+            form {
+                textarea {
+                    display: block;
+                    margin-bottom: 15px;
+                    height: 220px;
+                    width: 290px;
+                }
             }
         }
     }
@@ -69,6 +82,12 @@
                 position: absolute;
                 right: 30%;
             }
+        }
+    }
+    
+    footer {
+        #footR {
+            border-right: 0px;
         }
     }
 }

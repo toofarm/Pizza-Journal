@@ -35,7 +35,7 @@
         background-color: $lightGrey;
         border-radius: 10px;
         text-align: center;
-        width: 170px;
+        width: 250px;
         margin: 7px 0px;
         font-family: $headFont;
         font-size: 20px;
@@ -46,6 +46,7 @@
         background-color: $bodyTan;
         margin: 0px;
         height: auto;
+        overflow-x: hidden;
     }
 
     #navSmall {
@@ -126,7 +127,7 @@
 
         .navbar-header {
             width: 170px;
-            margin-left: 44%;
+            margin-left: 50%;
             margin-right: 50%;
             margin-top: -70px;
             display: inline-block;
@@ -173,6 +174,32 @@
     #mainSearch {
         margin-top: 5px;
     }
+
+#bigun {
+    margin: 0px;
+    padding: 0px;
+    #myModal {
+        .modal-content {
+            .modal-header {
+                background-color: $darkOrange;
+                .modal-title {
+                    font-family: $headFont;
+                    font-size: 25px;
+                }
+            }
+            .modal-body {
+                background-color: $bodyTan;
+                h5 {
+                    font-family: $headFont;
+                    font-size:20px;
+                }
+            }
+            .modal-footer {
+                background-color: $lightTan;
+            }
+        }
+    }
+}
 
     #mainContent {
         z-index: 3;
@@ -260,7 +287,7 @@
                 }
                 i {
                     @include plusStyle($darkGrey, 54px);
-                    margin: 20px 0px 0px 20px;
+                    margin: 15px 0px 0px 0px;
                 }
             }
             .cardAddBtn:hover {
@@ -277,7 +304,8 @@
         }
 
         #cardCol {
-            padding-left: 20px;
+            padding: 0px 30px;
+            margin: 0px;
 
             .orderToggle {
                 margin-top: -17px;
@@ -292,60 +320,167 @@
                 text-decoration: underline;
                 cursor: pointer;
             }
+
+            .cardAdd {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                width: 50%;
+                margin: 0px auto;
+                h2 {
+                    color: $darkGrey;
+                    font-size: 35px;
+                }
+                i {
+                    @include plusStyle ($darkGrey, 75px);
+                }
+            }
+            .cardAdd:hover {
+                cursor: pointer;
+                h2,
+                i {
+                    color: black;
+                }
+            }
         }
 
         .pizzaCard {
             @include pizzaCard;
-            .pizzaPhoto {
-                @include pizzaPhoto;
-            }
             h2 {
                 font-family: $headFont;
-                position: absolute;
-                top: 40px;
-                left: 300px;
+                margin: 15px 0px 0px 15px;
                 text-decoration: underline;
             }
-
-            .basics {
-                font-family: $bodyFont;
-                font-size: 20px;
-                max-width: 250px;
-            }
-
-            .rankings {
-                margin-left: 285px;
-                margin-top: 105px;
-                max-width: 300px;
+            .cardFlex {
+                display: flex;
+                flex-flow: row wrap;
                 h4 {
                     font-family: $headFont;
                     font-size: 20px;
                     text-decoration: underline;
                 }
-                .rankBox {
-                    display: flex;
-                    flex-flow: row wrap;
-                    align-items: center;
-                    justify-content: space-around;
-                    .rankItem {
-                        width: 75px;
+                .pizzaPhoto {
+                    @include pizzaPhoto;
+                }
+                .basics {
+                    font-family: $bodyFont;
+                    font-size: 23px;
+                    max-width: 250px;
+                }
+
+                .rankings {
+                    margin-left: 15px;
+                    max-width: 300px;
+                    .rankBox {
                         display: flex;
-                        flex-flow: column nowrap;
+                        flex-flow: row wrap;
                         align-items: center;
+                        justify-content: space-around;
+                        .rankItem {
+                            width: 75px;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            align-items: center;
+                        }
+                    }
+                    .thinCrust {
+                        @include crustBox;
+                    }
+                    .medCrust {
+                        @include crustBox;
+                        height: 40px;
+                    }
+                    .thickCrust {
+                        @include crustBox;
+                        height: 60px;
+                        background-color: $darkGrey;
                     }
                 }
-                .thinCrust {
-                    @include crustBox;
+
+                .useCom {
+                    min-width: 100px;
+                    margin: 15px;
+                    .comment {
+                        border: 2px solid $darkOrange;
+                        overflow: scroll;
+                        padding: 10px;
+                        font-family: $bodyFont;
+                        font-size: 18px;
+                        border-radius: 10px;
+                        background-color: $bodyTan;
+                        max-height: 85px;
+                    }
                 }
-                .medCrust {
-                    @include crustBox;
-                    height: 40px;
+                .toppings {
+                    margin-left: 15px;
+                    .toppingList {
+                        font-size: 22px;
+                        font-family: $bodyFont;
+                    }
                 }
-                .thickCrust {
-                    @include crustBox;
-                    height: 60px;
-                    background-color: $darkGrey;
-                }
+            }
+        }
+    }
+
+    footer {
+        background-color: #FFCA80;
+        height: auto;
+        margin: 15px 0px 0px 0px;
+        #footR {
+            border-right: 2px solid black;
+            margin: 20px 0px;
+            h4   {
+                font-family: $headFont;
+            }
+            p {
+                font-family: $bodyFont;
+            }
+            input {
+                display: block;
+                margin-bottom: 10px;
+            }
+            #em {
+                    width: 200px;
+            }
+            textarea {
+                width: 360px;
+                height: 200px;
+                resize: none;
+                display: none;
+            }
+            #send {
+                border-radius: 10px;
+                background-color: $darkGrey;
+                font-size: 14px;
+                font-family: $headFont;
+                color: #fff;
+                width: 70px;
+                height: 40px;
+                border: 0px;
+            }
+            #send:hover {
+                background-color: $lightGrey;
+                color: #000;
+            }
+            #sent {
+                display: none;
+                font-family: $bodyFont;
+                font-size: 20px;
+            }
+        }
+        #footL {
+            color: $darkGrey;
+            height: 100%;
+            .footLink {
+                font-size: 22px;
+                margin: 30px 20px;
+            }
+            a {
+                text-decoration: none;
+                color: $darkGrey;
+            }
+            a:hover {
+                color: $lightGrey;
             }
         }
     }

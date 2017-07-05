@@ -61,10 +61,59 @@
         </div>
     </nav>
 
-    <!--    Profile bar-->
-    <div class="container-fluid">
+    <!--   Main container-->
+    <div class="container-fluid" id="bigun">
+
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Add more pizza</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="pcForm">
+                            <h5>Pizza name:</h5>
+                            <input type="text" name="pizzaName" required>
+                            <h5>Pizza score:</h5>
+                            <select name="pizzaScore" required><option value="1/10">1</option>
+                            <option value="2/10">2</option>
+  <option value="3/10">3</option>
+  <option value="4/10">4</option>
+  <option value="5/10">5</option>
+  <option value="6/10">6</option>
+  <option value="7/10">7</option>
+  <option value="8/10">8</option>
+  <option value="9/10">9</option>
+  <option value="10/10">10</option>
+</select>
+                            <h5>Restaurant:</h5>
+                            <input type="text" name="restaurant">
+                            <h5>Date:</h5>
+                            <input type="date" name="date" required>
+                            <h5>Cheese:</h5>
+                            <input type="checkbox" name="cheese1" value="greasy"> Greasy
+                            <input type="checkbox" name="cheese2" value="stringy"> Stringy
+                            <input type="checkbox" name="cheese3" value="salty"> Salty
+                            <input type="checkbox" name="cheese4" value="creamy"> Creamy
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <div class="row" id="mainContent">
+            <!--    Profile bar-->
             <div class="col-lg-3 col-lg-push-1 profile">
+                <h2>OdorousMaximus</h2>
                 <div class="userPhoto">
                 </div>
                 <div id="pizzaScoreContainer">
@@ -73,17 +122,17 @@
                         <div class="pizzaNum">17</div>
                     </div>
                 </div>
-                <h2>OdorousMaximus</h2>
+
                 <div class="bioText">
                     Native to the swamps of rural Louisiana, I first experienced pizza when searching for new and exciting ways to deploy alligator meat across my daily cuisine. Since become quite fond of arugula. Moved to NYC to make it in the world of competitive dance.
                 </div>
-                <div class="cardAddBtn">
+                <button type="button" class="cardAddBtn" data-toggle="modal" data-target="#myModal">
                     <div class="addBtnTxt">
                         Create new pizza card
                     </div>
                     <i class="fa fa-plus" aria-hidden="true"></i>
 
-                </div>
+                </button>
             </div>
 
 
@@ -95,83 +144,321 @@
                 </div>
 
                 <div class="pizzaCard">
-                    <div class="pizzaPhoto">
-                    </div>
                     <h2 class="pizzaTitle"> <span class="pizzaName">Mushroom and Arugula</span> -
                         <span class="pizzaScore">8/10</span></h2>
+                    <div class="cardFlex">
+                        <!--                        This div contains photo, date and restaurant-->
+                        <div>
+                            <div class="pizzaPhoto"></div>
+                            <ul class="basics">
+                                <li class="restaurant"> Speedy Romeo's</li>
+                                <li class="date">June 17, '17</li>
+                            </ul>
+                        </div>
 
-                    <ul class="basics">
-                        <li class="restaurant"> Speedy Romeo's</li>
-                        <li class="date">June 17, '17</li>
-                    </ul>
 
-                    <div class="rankings">
-                        <h4>Cheese</h4>
-                        <div class="rankBox">
-                            <div class="rankItem">
-                                <i class="fa fa-circle-o" aria-hidden="true"></i>
-                                <p>Greasy</p>
+                        <div class="rankings">
+                            <h4>Cheese</h4>
+                            <div class="rankBox">
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Greasy</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Stringy</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Salty</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <p>Creamy</p>
+                                </div>
+
                             </div>
-                            <div class="rankItem">
-                                <i class="fa fa-circle-o" aria-hidden="true"></i>
-                                <p>Stringy</p>
+
+                            <h4>Sauce</h4>
+                            <div class="rankBox">
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Sweet</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <p>Thick</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Salty</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <p>Savory</p>
+                                </div>
                             </div>
-                            <div class="rankItem">
-                                <i class="fa fa-circle-o" aria-hidden="true"></i>
-                                <p>Salty</p>
+                            <h4>Crust</h4>
+                            <div class="thinCrust">
+                                Thin
                             </div>
-                            <div class="rankItem">
-                                <i class="fa fa-circle" aria-hidden="true"></i>
-                                <p>Creamy</p>
+                            <div class="medCrust">
+                                Medium
+                            </div>
+                            <div class="thickCrust">
+                                Thick
                             </div>
 
                         </div>
 
-                        <h4>Sauce</h4>
-                        <div class="rankBox">
-                            <div class="rankItem">
-                                <i class="fa fa-circle-o" aria-hidden="true"></i>
-                                <p>Sweet</p>
-                            </div>
-                            <div class="rankItem">
-                                <i class="fa fa-circle" aria-hidden="true"></i>
-                                <p>Thick</p>
-                            </div>
-                            <div class="rankItem">
-                                <i class="fa fa-circle-o" aria-hidden="true"></i>
-                                <p>Salty</p>
-                            </div>
-                            <div class="rankItem">
-                                <i class="fa fa-circle" aria-hidden="true"></i>
-                                <p>Savory</p>
-                            </div>
+                        <div class="toppings">
+                            <h4>Toppings</h4>
+                            <ul class="toppingList">
+                                <li>Mushrooms</li>
+                                <li>Pepperoni</li>
+                                <li>Bell Peppers</li>
+                                <li>Olives</li>
+                                <li>Basil</li>
+                                <li>Red pepper flakes</li>
+                            </ul>
+
                         </div>
-                        
-                        <div class="thinCrust">
-                        Thin
-                        </div>
-                        <div class="medCrust">
-                        Medium
-                        </div>
-                        <div class="thickCrust">
-                        Thick
+
+                        <div class="useCom">
+                            <h4>Comments</h4>
+                            <div class="comment">It’s not the crime—it’s the cover up. But then again, maybe it's the bananas. Despite a surname that is practically synonymous with modern American cinema, Sofia Coppola didn't want to be a film director. She tells Marc about her early career ambitions and how they inevitably led her into the family business. The two of them also discuss Sofia's films, including The Virgin Suicides, Lost in Translation, Marie Antoinette, and her remake of a gritty 1970s Clint Eastwood movie, The Beguiled.</div>
                         </div>
 
                     </div>
-
                 </div>
 
                 <div class="pizzaCard">
+                    <h2 class="pizzaTitle"> <span class="pizzaName">Pepperoni and sausage</span> -
+                        <span class="pizzaScore">2/10</span></h2>
+                    <div class="cardFlex">
+                        <!--                        This div contains photo, date and restaurant-->
+                        <div>
+                            <div class="pizzaPhoto"></div>
+                            <ul class="basics">
+                                <li class="restaurant"> Domino's</li>
+                                <li class="date">June 18, '17</li>
+                            </ul>
+                        </div>
 
+
+                        <div class="rankings">
+                            <h4>Cheese</h4>
+                            <div class="rankBox">
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Greasy</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Stringy</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Salty</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <p>Creamy</p>
+                                </div>
+
+                            </div>
+
+                            <h4>Sauce</h4>
+                            <div class="rankBox">
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Sweet</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <p>Thick</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Salty</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <p>Savory</p>
+                                </div>
+                            </div>
+                            <h4>Crust</h4>
+                            <div class="thinCrust">
+                                Thin
+                            </div>
+                            <div class="medCrust">
+                                Medium
+                            </div>
+                            <div class="thickCrust">
+                                Thick
+                            </div>
+
+                        </div>
+
+                        <div class="toppings">
+                            <h4>Toppings</h4>
+                            <ul class="toppingList">
+                                <li>Mushrooms</li>
+                                <li>Pepperoni</li>
+                                <li>Bell Peppers</li>
+                                <li>Olives</li>
+                                <li>Basil</li>
+                                <li>Red pepper flakes</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="useCom">
+                            <h4>Comments</h4>
+                            <div class="comment">It’s not the crime—it’s the cover up. But then again, maybe it's the bananas. Despite a surname that is practically synonymous with modern American cinema, Sofia Coppola didn't want to be a film director. She tells Marc about her early career ambitions and how they inevitably led her into the family business. The two of them also discuss Sofia's films, including The Virgin Suicides, Lost in Translation, Marie Antoinette, and her remake of a gritty 1970s Clint Eastwood movie, The Beguiled.</div>
+                        </div>
+
+                    </div>
                 </div>
+
+                <div class="pizzaCard">
+                    <h2 class="pizzaTitle"> <span class="pizzaName">Pepperoni and sausage</span> -
+                        <span class="pizzaScore">2/10</span></h2>
+                    <div class="cardFlex">
+                        <!--                        This div contains photo, date and restaurant-->
+                        <div>
+                            <div class="pizzaPhoto"></div>
+                            <ul class="basics">
+                                <li class="restaurant"> Domino's</li>
+                                <li class="date">June 18, '17</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="rankings">
+                            <h4>Cheese</h4>
+                            <div class="rankBox">
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Greasy</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Stringy</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Salty</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <p>Creamy</p>
+                                </div>
+
+                            </div>
+
+                            <h4>Sauce</h4>
+                            <div class="rankBox">
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Sweet</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <p>Thick</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                                    <p>Salty</p>
+                                </div>
+                                <div class="rankItem">
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <p>Savory</p>
+                                </div>
+                            </div>
+                            <h4>Crust</h4>
+                            <div class="thinCrust">
+                                Thin
+                            </div>
+                            <div class="medCrust">
+                                Medium
+                            </div>
+                            <div class="thickCrust">
+                                Thick
+                            </div>
+
+                        </div>
+
+                        <div class="toppings">
+                            <h4>Toppings</h4>
+                            <ul class="toppingList">
+                                <li>Mushrooms</li>
+                                <li>Pepperoni</li>
+                                <li>Bell Peppers</li>
+                                <li>Olives</li>
+                                <li>Basil</li>
+                                <li>Red pepper flakes</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="useCom">
+                            <h4>Comments</h4>
+                            <div class="comment">It’s not the crime—it’s the cover up. But then again, maybe it's the bananas. Despite a surname that is practically synonymous with modern American cinema, Sofia Coppola didn't want to be a film director. She tells Marc about her early career ambitions and how they inevitably led her into the family business. The two of them also discuss Sofia's films, including The Virgin Suicides, Lost in Translation, Marie Antoinette, and her remake of a gritty 1970s Clint Eastwood movie, The Beguiled.</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cardAdd">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <h2>Add more pizza!</h2>
+                </div>
+
             </div>
+
         </div>
     </div>
+
+    <!--            Footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div id="footR" class="col-lg-4 col-lg-push-3 col-md-4 col-md-push-2">
+                    <h4>Tell someone else about pizza journal</h4>
+                    <p>Share the joy of pizza journal with friends, enemies, acquaintances, and lovers</p>
+                    <form id="mailer">
+                        <input class="emAdd" id="em" type="email" name="email" placeholder="Email address" required>
+                        <textarea class="emMessage" name="message">Check out this website that lets you keep track of the delicious pizza you eat and share it with your friends. It's called Pizza Journal.
+                            
+www.pizzajournal.com
+                                
+All the best,
+Your pals at Pizza Journal
+-----
+                        </textarea>
+                        <input id="send" type="submit" name="mail" value="Send">
+                    </form>
+                    <div id="sent">Message sent!</div>
+
+                </div>
+                <div id="footL" class="col-lg-4 col-lg-push-3 col-md-4 col-md-push-2">
+                    <div class="footLink"><a href="#" target="">Privacy policy</a></div>
+                    <div class="footLink"><a href="#" target="">Contact the guy who made this</a></div>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="inputAni.js"></script>
     <script src="navAni.js"></script>
+    <script src="mailerAni.js"></script>
+    <script src="pscoreAni.js"></script>
+    <script src="modalAni.js"></script>
 </body>
 
 </html>
