@@ -4,7 +4,7 @@ var w = $(window).width();
 
 
 
-$('.form-group > input').focus(function () {
+$('.navbar-form > .form-group > input').focus(function () {
         if (w > 769) {
             if ($(this).val() == 'Search pizza') {
                 $(this).val('');
@@ -16,7 +16,7 @@ $('.form-group > input').focus(function () {
             }, 400)
 
 
-    $('.form-group > input').blur(function () {
+    $('.navbar-form > .form-group > input').blur(function () {
             if ($(this).val() == '') {
                 $(this).val('Search pizza');
             }

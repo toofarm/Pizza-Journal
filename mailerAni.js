@@ -2,12 +2,12 @@ var w = $(window).width();
 var str = 'Email address';
 
 $('#em').focus(function () {
-    if (w > 1025 && $('textarea').css('display') == 'none') {
-        $('textarea').slideDown(1000);
+    if (w > 1025 && $('.emMessage').css('display') == 'none') {
+        $('.emMessage').slideDown(1000);
     
 
     $('.emMessage').blur(function () {
-        if ($('#em').val() == '') { $('textarea').slideUp(1000);
+        if ($('#em').val() == '') { $('.emMessage').slideUp(1000);
         }
     });
         }

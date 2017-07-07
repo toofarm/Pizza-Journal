@@ -1,4 +1,4 @@
-var pCount = $('#cardCol > .pizzaCard').length;
+var pCount = $('#pcHolder > .pizzaCard').length;
 
 $(document).ready(function () {
     $('.pizzaNum').html(pCount);
