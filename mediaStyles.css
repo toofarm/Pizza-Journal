@@ -1,21 +1,35 @@
+@media (max-width: 1280px) {
+  #bigun #mainContent .profile .userPhoto {
+    height: 140px;
+    width: 140px; }
+  #bigun #mainContent .profile #pizzaScoreContainer {
+    position: absolute;
+    top: 205px;
+    right: 5%; } }
 @media (max-width: 1024px) {
+  #navLarge form {
+    margin-left: -50px; }
+    #navLarge form input {
+      width: 180px; }
+
   #navSmall .navbar-brand img {
     margin-left: -25px; }
   #navSmall .navbar-nav {
     margin-left: 70%; }
 
-  #mainContent {
+  #bigun #mainContent {
     margin-top: 0px; }
-    #mainContent .profile {
+    #bigun #mainContent .profile {
       border-right: 0px;
       padding-bottom: 25px; }
-      #mainContent .profile .userPhoto {
+      #bigun #mainContent .profile .userPhoto {
         position: absolute;
         bottom: -10px;
-        right: 25%; }
-      #mainContent .profile #pizzaScoreContainer {
+        right: 30%; }
+      #bigun #mainContent .profile #pizzaScoreContainer {
         position: absolute;
-        bottom: 20px;
+        top: auto;
+        bottom: 10px;
         right: 5%; }
 
   footer #footR form textarea {
@@ -23,7 +37,7 @@
     margin-bottom: 15px;
     height: 220px;
     width: 290px; } }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   #navLarge .navbar-header {
     margin-left: 43%;
     margin-top: -45px; }
@@ -38,9 +52,9 @@
     #navLarge form input {
       width: 180px; }
   #navLarge .navbar-nav {
-    margin-top: -141px; }
+    margin-top: -143px; }
 
-  #mainContent .profile .userPhoto {
+  #bigun #mainContent .profile .userPhoto {
     position: absolute;
     right: 30%; }
 
@@ -67,7 +81,7 @@
     #navLarge .navbar-nav {
       margin: -86px 0px 0px -10px; }
 
-  #mainContent .profile .userPhoto {
+  #bigun #mainContent .profile .userPhoto {
     position: absolute;
     right: 31%;
     bottom: -10px; } }
@@ -75,22 +89,32 @@
   #navLarge .navbar-nav {
     margin: -87px 0px 0px -40px; } }
 @media (max-width: 667px) {
-  #mainContent .profile .userPhoto {
+  #bigun #mainContent .profile .userPhoto {
     position: absolute;
     right: 31%; } }
 @media (max-width: 640px) {
   #navLarge .navbar-nav {
-    margin: -79px 0px 0px -40px;
+    margin: -80px 0px 0px -40px;
     font-size: 25px; } }
 @media (max-width: 568px) {
   #navLarge .navbar-nav {
     margin: -138px -15px 0px 0px;
     font-size: 25px; }
 
-  #mainContent .profile .userPhoto {
+  #bigun #mainContent .profile .userPhoto {
     position: absolute;
-    right: 34%; } }
-@media (max-width: 414px) {
+    right: 34%; }
+
+  #resumeBox {
+    margin-top: 50px; }
+    #resumeBox #myPic {
+      display: block;
+      margin: 20px auto; }
+    #resumeBox h1 {
+      display: block;
+      position: static;
+      text-align: center; } }
+@media (max-width: 480px) {
   #navLarge {
     height: 200px; }
     #navLarge .navbar-header {
@@ -107,10 +131,13 @@
       #navLarge form button {
         margin: -95px 0px 0px 190px; }
 
-  #mainContent .profile .userPhoto {
+  #bigun #mainContent .profile h2 {
+    padding: 15px 0px; }
+  #bigun #mainContent .profile .userPhoto {
     position: static; }
-  #mainContent .profile #pizzaScoreContainer {
-    position: static; } }
+  #bigun #mainContent .profile #pizzaScoreContainer {
+    position: static;
+    margin-top: -135px; } }
 @media (max-width: 360px) {
   #navLarge .navbar-nav {
     font-size: 25px;
@@ -118,17 +145,21 @@
     width: 70%;
     margin: -282px 7%; }
   #navLarge form {
-    margin: 60px 0px 0px 25px; } }
+    margin: 60px 0px 0px 25px; }
+
+  #bigun #mainContent .profile .userPhoto {
+    height: 130px;
+    width: 130px; } }
 @media (max-width: 320px) {
   #navLarge form {
     margin: 60px 0px 0px 0px; }
 
-  #mainContent .profile .userPhoto {
+  #bigun #mainContent .profile .userPhoto {
     height: 120px;
     width: 120px; }
-  #mainContent .profile h2 {
+  #bigun #mainContent .profile h2 {
     font-size: 35px; }
-  #mainContent .profile #pizzaScoreContainer {
-    margin-top: -120px; } }
+  #bigun #mainContent .profile #pizzaScoreContainer {
+    margin-top: -130px; } }
 
 /*# sourceMappingURL=mediaStyles.css.map */

@@ -1,7 +1,6 @@
 body {
   background-color: #ffe3bd;
   margin: 0px;
-  height: auto;
   overflow-x: hidden; }
 
 #navSmall {
@@ -66,7 +65,7 @@ body {
     width: 170px;
     margin-left: 44%;
     margin-right: 50%;
-    margin-top: -70px;
+    margin-top: -71px;
     display: inline-block; }
   #navLarge .navbar-brand > img {
     height: 150px;
@@ -76,7 +75,7 @@ body {
   #navLarge .navbar-nav {
     display: inline-block;
     float: right;
-    margin-top: -167px; }
+    margin-top: -165px; }
     #navLarge .navbar-nav .myActive {
       background-color: #de9939; }
     #navLarge .navbar-nav th {
@@ -101,8 +100,7 @@ body {
   margin-top: 5px; }
 
 #bigun {
-  margin: 0px;
-  padding: 0px; }
+  width: auto; }
   #bigun #myModal .modal-content .modal-header {
     background-color: #ffb042; }
     #bigun #myModal .modal-content .modal-header .modal-title {
@@ -122,204 +120,203 @@ body {
       background-color: aliceblue; }
   #bigun #myModal .modal-content .modal-footer {
     background-color: #ffca80; }
-
-#mainContent {
-  z-index: 3;
-  margin-top: 105px;
-  height: auto; }
-  #mainContent .profile {
-    border-right: 2px solid black;
-    height: auto;
-    overflow: visible;
-    position: relative; }
-    #mainContent .profile .userPhoto {
-      height: 150px;
-      width: 150px;
-      border-radius: 100px;
-      border: 4px solid #DDDDDD;
-      overflow: hidden; }
-      #mainContent .profile .userPhoto img {
+  #bigun #mainContent {
+    z-index: 3;
+    margin-top: 105px;
+    height: auto; }
+    #bigun #mainContent .profile {
+      border-right: 2px solid black;
+      height: auto;
+      overflow: visible;
+      position: relative; }
+      #bigun #mainContent .profile .userPhoto {
         height: 150px;
-        width: auto; }
-    #mainContent .profile #pizzaScoreContainer {
-      float: right;
-      margin-top: -150px; }
-      #mainContent .profile #pizzaScoreContainer h3 {
-        color: #666666;
-        font-family: "Lato", "sans-serif";
-        margin: 0px 0px;
-        font-size: 30px;
-        right: 20px;
-        top: 15px; }
-      #mainContent .profile #pizzaScoreContainer .pizzaCounter {
         width: 150px;
-        height: 90px;
-        border-radius: 10px;
-        background-color: rgba(255, 176, 66, 0.7);
-        border: 2px solid #de9939;
-        top: 52px;
-        right: 20px;
-        padding: 5px; }
-        #mainContent .profile #pizzaScoreContainer .pizzaCounter .pizzaNum {
-          font-size: 50px;
-          color: #fff;
-          width: 20%;
-          margin: 0px auto; }
-    #mainContent .profile h2 {
-      font-size: 35px;
-      font-family: "Lato", "sans-serif";
-      color: #de9939;
-      top: 160px; }
-    #mainContent .profile .bioText {
-      top: 245px;
-      font-family: "Abel", "sans-serif";
-      border-left: 3px solid #666666;
-      font-size: 25px;
-      padding: 0px 20px; }
-    #mainContent .profile .cardAddBtn {
-      width: 200px;
-      height: 100px;
-      background-color: #DDDDDD;
-      border: 3px solid #666666;
-      border-radius: 10px;
-      margin-top: 15px; }
-      #mainContent .profile .cardAddBtn .addBtnTxt {
-        color: #666666;
-        width: 120px;
-        float: right;
-        position: relative;
-        text-align: center;
-        padding: 6px;
-        font-size: 21px;
-        margin-top: 10px; }
-      #mainContent .profile .cardAddBtn i {
-        color: #666666;
-        font-size: 54px;
-        margin: 15px 0px 0px 0px; }
-    #mainContent .profile .cardAddBtn:hover {
-      background-color: #666666;
-      border: 3px solid #DDDDDD;
-      cursor: pointer; }
-      #mainContent .profile .cardAddBtn:hover i {
-        color: #DDDDDD;
-        font-size: 54px; }
-      #mainContent .profile .cardAddBtn:hover .addBtnTxt {
-        color: #DDDDDD; }
-  #mainContent #cardCol {
-    padding: 0px 30px;
-    margin: 0px; }
-    #mainContent #cardCol .orderToggle {
-      margin-top: -17px; }
-      #mainContent #cardCol .orderToggle .sortActive {
-        color: #666666; }
-    #mainContent #cardCol #date:hover,
-    #mainContent #cardCol #tasty:hover {
-      text-decoration: underline;
-      cursor: pointer; }
-    #mainContent #cardCol .cardAdd {
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      width: 50%;
-      margin: 0px auto; }
-      #mainContent #cardCol .cardAdd h2 {
-        color: #666666;
-        font-size: 35px; }
-      #mainContent #cardCol .cardAdd i {
-        color: #666666;
-        font-size: 75px; }
-    #mainContent #cardCol .cardAdd:hover {
-      cursor: pointer; }
-      #mainContent #cardCol .cardAdd:hover h2,
-      #mainContent #cardCol .cardAdd:hover i {
-        color: black; }
-  #mainContent .pizzaCard {
-    border: 3px solid #de9939;
-    background-color: #ffca80;
-    height: auto;
-    margin-bottom: 20px; }
-    #mainContent .pizzaCard h2 {
-      font-family: "Lato", "sans-serif";
-      margin: 15px 0px 0px 15px;
-      text-decoration: underline; }
-    #mainContent .pizzaCard .cardFlex {
-      display: flex;
-      flex-flow: row wrap; }
-      #mainContent .pizzaCard .cardFlex h4 {
-        font-family: "Lato", "sans-serif";
-        font-size: 20px;
-        text-decoration: underline; }
-      #mainContent .pizzaCard .cardFlex .pizzaPhoto {
-        height: 230px;
-        width: 230px;
-        border: 2px solid #DDDDDD;
-        border-radius: 150px;
-        margin: 10px;
+        border-radius: 100px;
+        border: 4px solid #DDDDDD;
         overflow: hidden; }
-        #mainContent .pizzaCard .cardFlex .pizzaPhoto img {
-          height: 235px;
+        #bigun #mainContent .profile .userPhoto img {
+          height: 150px;
           width: auto; }
-      #mainContent .pizzaCard .cardFlex .basics {
+      #bigun #mainContent .profile #pizzaScoreContainer {
+        float: right;
+        margin-top: -150px; }
+        #bigun #mainContent .profile #pizzaScoreContainer h3 {
+          color: #666666;
+          font-family: "Lato", "sans-serif";
+          margin: 0px 0px;
+          font-size: 30px;
+          right: 20px;
+          top: 15px; }
+        #bigun #mainContent .profile #pizzaScoreContainer .pizzaCounter {
+          width: 150px;
+          height: 90px;
+          border-radius: 10px;
+          background-color: rgba(255, 176, 66, 0.7);
+          border: 2px solid #de9939;
+          top: 52px;
+          right: 20px;
+          padding: 5px; }
+          #bigun #mainContent .profile #pizzaScoreContainer .pizzaCounter .pizzaNum {
+            font-size: 50px;
+            color: #fff;
+            width: 20%;
+            margin: 0px auto; }
+      #bigun #mainContent .profile h2 {
+        font-size: 35px;
+        font-family: "Lato", "sans-serif";
+        color: #de9939;
+        top: 160px; }
+      #bigun #mainContent .profile .bioText {
+        top: 245px;
         font-family: "Abel", "sans-serif";
-        font-size: 23px;
-        max-width: 250px; }
-      #mainContent .pizzaCard .cardFlex .rankings {
-        margin-left: 15px;
-        max-width: 300px; }
-        #mainContent .pizzaCard .cardFlex .rankings .rankBox {
-          display: flex;
-          flex-flow: row wrap;
-          align-items: center;
-          justify-content: space-around; }
-          #mainContent .pizzaCard .cardFlex .rankings .rankBox .rankItem {
-            width: 75px;
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: center; }
-        #mainContent .pizzaCard .cardFlex .rankings .thinCrust {
-          background-color: #DDDDDD;
-          border-radius: 10px;
+        border-left: 3px solid #666666;
+        font-size: 25px;
+        padding: 0px 20px; }
+      #bigun #mainContent .profile .cardAddBtn {
+        width: 200px;
+        height: 100px;
+        background-color: #DDDDDD;
+        border: 3px solid #666666;
+        border-radius: 10px;
+        margin-top: 15px; }
+        #bigun #mainContent .profile .cardAddBtn .addBtnTxt {
+          color: #666666;
+          width: 120px;
+          float: right;
+          position: relative;
           text-align: center;
-          width: 250px;
-          margin: 7px 0px;
-          font-family: "Lato", "sans-serif";
-          font-size: 20px; }
-        #mainContent .pizzaCard .cardFlex .rankings .medCrust {
-          background-color: #DDDDDD;
-          border-radius: 10px;
-          text-align: center;
-          width: 250px;
-          margin: 7px 0px;
+          padding: 6px;
+          font-size: 21px;
+          margin-top: 10px; }
+        #bigun #mainContent .profile .cardAddBtn i {
+          color: #666666;
+          font-size: 54px;
+          margin: 15px 0px 0px 0px; }
+      #bigun #mainContent .profile .cardAddBtn:hover {
+        background-color: #666666;
+        border: 3px solid #DDDDDD;
+        cursor: pointer; }
+        #bigun #mainContent .profile .cardAddBtn:hover i {
+          color: #DDDDDD;
+          font-size: 54px; }
+        #bigun #mainContent .profile .cardAddBtn:hover .addBtnTxt {
+          color: #DDDDDD; }
+    #bigun #mainContent #cardCol {
+      padding: 0px 30px;
+      margin: 0px; }
+      #bigun #mainContent #cardCol .orderToggle {
+        margin-top: -17px; }
+        #bigun #mainContent #cardCol .orderToggle .sortActive {
+          color: #666666; }
+      #bigun #mainContent #cardCol #date:hover,
+      #bigun #mainContent #cardCol #tasty:hover {
+        text-decoration: underline;
+        cursor: pointer; }
+      #bigun #mainContent #cardCol .cardAdd {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 50%;
+        margin: 0px auto; }
+        #bigun #mainContent #cardCol .cardAdd h2 {
+          color: #666666;
+          font-size: 35px; }
+        #bigun #mainContent #cardCol .cardAdd i {
+          color: #666666;
+          font-size: 75px; }
+      #bigun #mainContent #cardCol .cardAdd:hover {
+        cursor: pointer; }
+        #bigun #mainContent #cardCol .cardAdd:hover h2,
+        #bigun #mainContent #cardCol .cardAdd:hover i {
+          color: black; }
+    #bigun #mainContent .pizzaCard {
+      border: 3px solid #de9939;
+      background-color: #ffca80;
+      height: auto;
+      margin-bottom: 20px; }
+      #bigun #mainContent .pizzaCard h2 {
+        font-family: "Lato", "sans-serif";
+        margin: 15px 0px 0px 15px;
+        text-decoration: underline; }
+      #bigun #mainContent .pizzaCard .cardFlex {
+        display: flex;
+        flex-flow: row wrap; }
+        #bigun #mainContent .pizzaCard .cardFlex h4 {
           font-family: "Lato", "sans-serif";
           font-size: 20px;
-          height: 40px; }
-        #mainContent .pizzaCard .cardFlex .rankings .thickCrust {
-          background-color: #DDDDDD;
-          border-radius: 10px;
-          text-align: center;
-          width: 250px;
-          margin: 7px 0px;
-          font-family: "Lato", "sans-serif";
-          font-size: 20px;
-          height: 60px;
-          background-color: #666666; }
-      #mainContent .pizzaCard .cardFlex .useCom {
-        min-width: 100px;
-        margin: 15px; }
-        #mainContent .pizzaCard .cardFlex .useCom .comment {
-          border: 2px solid #ffb042;
-          overflow: scroll;
-          padding: 10px;
+          text-decoration: underline; }
+        #bigun #mainContent .pizzaCard .cardFlex .pizzaPhoto {
+          height: 230px;
+          width: 230px;
+          border: 2px solid #DDDDDD;
+          border-radius: 150px;
+          margin: 10px;
+          overflow: hidden; }
+          #bigun #mainContent .pizzaCard .cardFlex .pizzaPhoto img {
+            height: 235px;
+            width: auto; }
+        #bigun #mainContent .pizzaCard .cardFlex .basics {
           font-family: "Abel", "sans-serif";
-          font-size: 18px;
-          border-radius: 10px;
-          background-color: #ffe3bd;
-          max-height: 85px; }
-      #mainContent .pizzaCard .cardFlex .toppings {
-        margin-left: 15px; }
-        #mainContent .pizzaCard .cardFlex .toppings .toppingList {
-          font-size: 22px;
-          font-family: "Abel", "sans-serif"; }
+          font-size: 23px;
+          max-width: 250px; }
+        #bigun #mainContent .pizzaCard .cardFlex .rankings {
+          margin-left: 15px;
+          max-width: 300px; }
+          #bigun #mainContent .pizzaCard .cardFlex .rankings .rankBox {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-around; }
+            #bigun #mainContent .pizzaCard .cardFlex .rankings .rankBox .rankItem {
+              width: 75px;
+              display: flex;
+              flex-flow: column nowrap;
+              align-items: center; }
+          #bigun #mainContent .pizzaCard .cardFlex .rankings .thinCrust {
+            background-color: #DDDDDD;
+            border-radius: 10px;
+            text-align: center;
+            width: 235px;
+            margin: 7px 0px;
+            font-family: "Lato", "sans-serif";
+            font-size: 20px; }
+          #bigun #mainContent .pizzaCard .cardFlex .rankings .medCrust {
+            background-color: #DDDDDD;
+            border-radius: 10px;
+            text-align: center;
+            width: 235px;
+            margin: 7px 0px;
+            font-family: "Lato", "sans-serif";
+            font-size: 20px;
+            height: 40px; }
+          #bigun #mainContent .pizzaCard .cardFlex .rankings .thickCrust {
+            background-color: #DDDDDD;
+            border-radius: 10px;
+            text-align: center;
+            width: 235px;
+            margin: 7px 0px;
+            font-family: "Lato", "sans-serif";
+            font-size: 20px;
+            height: 60px;
+            background-color: #666666; }
+        #bigun #mainContent .pizzaCard .cardFlex .useCom {
+          min-width: 100px;
+          margin: 15px; }
+          #bigun #mainContent .pizzaCard .cardFlex .useCom .comment {
+            border: 2px solid #ffb042;
+            overflow: scroll;
+            padding: 10px;
+            font-family: "Abel", "sans-serif";
+            font-size: 18px;
+            border-radius: 10px;
+            background-color: #ffe3bd;
+            max-height: 85px; }
+        #bigun #mainContent .pizzaCard .cardFlex .toppings {
+          margin-left: 15px; }
+          #bigun #mainContent .pizzaCard .cardFlex .toppings .toppingList {
+            font-size: 22px;
+            font-family: "Abel", "sans-serif"; }
 
 footer {
   background-color: #FFCA80;
@@ -368,6 +365,9 @@ footer {
       text-decoration: none;
       color: #666666; }
     footer #footL a:hover {
+      color: #DDDDDD; }
+    footer #footL #priv:hover {
+      cursor: pointer;
       color: #DDDDDD; }
 
 #loginBox {
@@ -465,5 +465,69 @@ footer {
       cursor: pointer; }
     #loginBox #landingFoot #footCopy {
       display: none; }
+
+#resumeBox {
+  border: 3px solid #de9939;
+  border-radius: 20px;
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  background-color: #ffca80; }
+  #resumeBox #myPic {
+    height: 170px;
+    width: 170px;
+    margin: 20px auto;
+    border: 2px solid #666666;
+    border-radius: 170px;
+    background-image: url(Assets/shane.uncleho.jpg);
+    background-position: center;
+    background-size: contain;
+    display: block; }
+  #resumeBox h1 {
+    font-family: "Lato", "sans-serif";
+    font-size: 50px;
+    color: #444;
+    display: block;
+    text-align: center; }
+  #resumeBox #bodStyle {
+    background-color: #ffe3bd;
+    border: 2px solid #ffb042;
+    margin: 10px 0px; }
+    #resumeBox #bodStyle #bodyContent {
+      font-size: 25px;
+      font-family: "Abel", "sans-serif";
+      margin: 10px 40px; }
+    #resumeBox #bodStyle #contacts {
+      list-style: none;
+      margin: 15px auto;
+      width: 50%;
+      padding: 5px;
+      border-top: 2px solid #ffb042; }
+      #resumeBox #bodStyle #contacts li {
+        font-size: 27px;
+        display: inline-block; }
+      #resumeBox #bodStyle #contacts #em {
+        display: none;
+        font-size: 22px; }
+      #resumeBox #bodStyle #contacts .icon {
+        margin: 10px; }
+        #resumeBox #bodStyle #contacts .icon i {
+          color: #444;
+          font-size: 55px; }
+        #resumeBox #bodStyle #contacts .icon i:hover {
+          color: #666666;
+          cursor: pointer; }
+
+#myModal1 .modal-content .modal-header {
+  background-color: #ffb042; }
+  #myModal1 .modal-content .modal-header .modal-title {
+    font-family: "Lato", "sans-serif";
+    font-size: 30px; }
+#myModal1 .modal-content .modal-body {
+  background-color: #ffe3bd;
+  font-family: "Abel", "sans-serif";
+  font-size: 25px; }
+#myModal1 .modal-content .modal-footer {
+  background-color: #ffca80; }
 
 /*# sourceMappingURL=style.css.map */

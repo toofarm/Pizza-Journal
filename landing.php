@@ -1,9 +1,12 @@
+<? session_start(); ?>
+
 <!DOCTYPE html>
 <html>
     
+    <head>
+    <title>Login | Pizza Journal</title>
     <?php require_once "head.php" ?>
-
-
+        </head>
 <body>
 
     <div class="container">
@@ -18,7 +21,7 @@
                 <div id="login">
                     <h1>Login</h1>
                     <div id="loginBiz">
-                        <form id="logForm">
+                        <form id="logForm" action="login.php" method="post">
                             <div class="form-group">
                                 <label>Username</label>
                                 <input class="form-control" type="text" name="un" id="un" required>
@@ -34,10 +37,10 @@
                 <div id="register">
                     <h1>Register</h1>
                     <div id="regBiz">
-                        <form id="regForm">
+                        <form id="regForm" method="post" action="registerprocess.php">
                             <div class="form-group">
                                 <label>Email</label>
-                                <input class="form-control" type="email" name="newem" id="newem" required>
+                                <input class="form-control" type="email" name="newem" id="newem"  required>
                             </div>
                             <div class="form-group">
                                 <label>Choose a username</label>
@@ -45,7 +48,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Choose a password</label>
-                                <input class="form-control" type="password" name="newpw" id="newpw" required>
+                                <input class="form-control" type="password" name="newpw" id="newpw"  required>
                             </div>
                             <div class="form-group">
                                 <label>Tell us a little bit about yourself</label>
@@ -78,6 +81,7 @@
     <script src="pscoreAni.js"></script>
     <script src="modalAni.js"></script>
     <script src="loginAni.js"></script>
+    <script src="activeAni.js"></script>
 </body>
 
 </html>

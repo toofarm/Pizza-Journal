@@ -1,0 +1,322 @@
+@media (max-width: 1280px) {
+    #bigun {
+        #mainContent {
+            .profile {
+                    .userPhoto {
+                        height: 140px;
+                        width: 140px;
+                    }
+                #pizzaScoreContainer {
+                    position: absolute;
+                    top: 205px;
+                    right: 5%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    
+    #navLarge {
+         form {
+            margin-left: -50px;
+            input {
+                width: 180px;
+            }
+    }
+    }
+    
+    #navSmall {
+        .navbar-brand {
+            img {
+                margin-left: -25px;
+            }
+        }
+
+        .navbar-nav {
+            margin-left: 70%;
+        }
+    }
+
+    #bigun {
+        #mainContent {
+            margin-top: 0px;
+
+            .profile {
+                border-right: 0px;
+                padding-bottom: 25px;
+
+                .userPhoto {
+                    position: absolute;
+                    bottom: -10px;
+                    right: 30%;
+                }
+
+                #pizzaScoreContainer {
+                    position: absolute;
+                    top: auto;
+                    bottom: 10px;
+                    right: 5%;
+                }
+            }
+        }
+    }
+
+    footer {
+        #footR {
+            form {
+                textarea {
+                    display: block;
+                    margin-bottom: 15px;
+                    height: 220px;
+                    width: 290px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+
+    #navLarge {
+        .navbar-header {
+            margin-left: 43%;
+            margin-top: -45px;
+            img {
+                height: 110px;
+                margin: -8px 0px 0px -25px;
+            }
+        }
+
+        #logoBacker {
+            height: 120px;
+            width: 120px;
+        }
+
+        form {
+            margin-left: 15px;
+            input {
+                width: 180px;
+            }
+        }
+
+        .navbar-nav {
+            margin-top: -143px;
+        }
+    }
+
+    #bigun {
+        #mainContent {
+            .profile {
+                .userPhoto {
+                    position: absolute;
+                    right: 30%;
+                }
+            }
+        }
+    }
+
+    footer {
+        #footR {
+            border-right: 0px;
+        }
+    }
+}
+
+@media (max-width: 736px) {
+    #navLarge {
+        height: 130px;
+
+        .navbar-header {
+            margin-left: 41%;
+            margin-top: -70px;
+            margin-right: 0px;
+        }
+        .navbar-form {
+            border: 0px;
+            form {
+                margin-left: 10px;
+                padding: 0px;
+                width: 500px;
+                input {
+                    width: 230px;
+                }
+                button {
+                    padding-left: 220px;
+                    font-size: 30px;
+                }
+            }
+        }
+        .navbar-nav {
+            margin: -86px 0px 0px -10px;
+        }
+    }
+
+    #bigun {
+        #mainContent {
+            .profile {
+                .userPhoto {
+                    position: absolute;
+                    right: 31%;
+                    bottom: -10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 732px) {
+    #navLarge {
+        .navbar-nav {
+            margin: -87px 0px 0px -40px;
+        }
+    }
+}
+
+@media (max-width: 667px) {
+
+    #bigun {
+        #mainContent {
+            .profile {
+                .userPhoto {
+                    position: absolute;
+                    right: 31%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    #navLarge {
+        .navbar-nav {
+            margin: -80px 0px 0px -40px;
+            font-size: 25px;
+        }
+    }
+}
+
+@media (max-width: 568px) {
+    #navLarge {
+        .navbar-nav {
+            margin: -138px -15px 0px 0px;
+            font-size: 25px;
+        }
+    }
+
+    #bigun {
+        #mainContent {
+            .profile {
+                .userPhoto {
+                    position: absolute;
+                    right: 34%;
+                }
+            }
+        }
+    }
+    
+    #resumeBox {
+        margin-top: 50px;
+        #myPic {
+            display: block;
+            margin: 20px auto;
+        }
+        h1 {
+            display: block;
+            position: static;
+            text-align: center;
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    #navLarge {
+        height: 200px;
+        .navbar-header {
+            margin-top: -37px;
+            margin-left: 36%;
+        }
+        .navbar-nav {
+            position: relative;
+            width: 70%;
+            margin: -282px 10%;
+            font-size: 30px;
+        }
+        form {
+            width: 250px;
+            margin: 60px 0px 0px 45px;
+            button {
+                margin: -95px 0px 0px 190px;
+            }
+        }
+    }
+
+    #bigun {
+        #mainContent {
+            .profile {
+                h2 {
+                    padding: 15px 0px;
+                }
+                .userPhoto {
+                    position: static;
+                }
+                #pizzaScoreContainer {
+                    position: static;
+                    margin-top: -135px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    #navLarge {
+        .navbar-nav {
+            font-size: 25px;
+            position: relative;
+            width: 70%;
+            margin: -282px 7%;
+        }
+        form {
+            margin: 60px 0px 0px 25px;
+        }
+    }
+
+    #bigun {
+        #mainContent {
+            .profile {
+                .userPhoto {
+                    height: 130px;
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    #navLarge {
+        form {
+            margin: 60px 0px 0px 0px;
+        }
+    }
+
+    #bigun {
+        #mainContent {
+            .profile {
+                .userPhoto {
+                    height: 120px;
+                    width: 120px;
+                }
+                h2 {
+                    font-size: 35px;
+                }
+                #pizzaScoreContainer {
+                    margin-top: -130px;
+                }
+            }
+        }
+    }
+}

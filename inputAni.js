@@ -5,7 +5,7 @@ var w = $(window).width();
 
 
 $('.navbar-form > .form-group > input').focus(function () {
-        if (w > 769) {
+        if (w > 981) {
             if ($(this).val() == 'Search pizza') {
                 $(this).val('');
             }

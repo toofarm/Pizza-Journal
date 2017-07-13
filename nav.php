@@ -1,6 +1,6 @@
 <nav>
         <!--        Small nav-->
-        <div id="navSmall" class="container-fluid navbar navbar-default">
+        <div id="navSmall" class="container navbar navbar-default">
             <div class="navbar-header">
                 <a class="navbar-brand text-center" href="#"><img alt="Pizza Journal" src="Assets/PJlogo1.png"></a>
             </div>
@@ -13,8 +13,9 @@
 
 
             <ul class="nav navbar-nav">
-                <li class="myActive"><a href="#">Profile</a></li>
-                <li><a href="#">Log out</a></li>
+                <li class="pr"><a href="#">Profile</a></li>
+<!--                <li><a href="#">Log out</a></li>-->
+                <li><a href="landing.php">Sign in</a></li>
             </ul>
         </div>
 
@@ -31,14 +32,15 @@
 
             <div class="navbar-header">
                 <div id="logoBacker">
-                    <a class="navbar-brand text-center" href="#"><img alt="Pizza Journal" src="Assets/PJlogo1.png"></a>
+                    <a class="navbar-brand text-center" href="profile.php"><img alt="Pizza Journal" src="Assets/PJlogo1.png"></a>
                 </div>
             </div>
 
             <table class="nav navbar-nav">
                 <tr>
-                    <th class="myActive"><a href="#">Profile</a></th>
-                    <th><a href="#">Log out</a></th>
+                    <th class="pr"><a href="#">Profile</a></th>
+<!--                    <th><a href="#">Log out</a></th>-->
+                    <th><a href="landing.php">Sign in</a></th>
                 </tr>
             </table>
         </div>
