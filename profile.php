@@ -1,10 +1,29 @@
 <?php session_start(); ?>
 
+<?php 
+    $u = $_SESSION["user"];
+    $p = file("Users/$u/profile.txt");
+    $b = $p[1];
+     
+    //Make sure to come back and fix this!!
+    $scan = scandir("Users/$u/");
+                
+//    print_r($scan);
+                
+    foreach($scan as $file) {
+        if($file == "image.jpg" || "image.jpeg" || "image.png" || "image.gif"){
+            $file = $_SESSION["img"] = $i;
+//            print_r($file);
+        }
+    }
+         
+    ?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Profile | Pizza Journal</title>
+    <title><?php echo $u ?> | Pizza Journal</title>
     <?php require_once "head.php" ?>
 </head>
 
@@ -15,8 +34,8 @@
     <!--   Main container-->
     <div class="container" id="bigun">
 
-    <!-- Pizza Card Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
+        <!-- Pizza Card Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -31,7 +50,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="secLabel">Restaurant:</label>
-                                <input type="text" name="restaurant" class="form-control" method="post" >
+                                <input type="text" name="restaurant" class="form-control" method="post">
                             </div>
                             <div class="form-group">
                                 <label class="secLabel">Date:</label>
@@ -39,7 +58,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="secLabel">Pizza photo</label>
-                                <input type="file" name="pic" class="form-control" accept="image/*" method="post" >
+                                <input type="file" name="pic" class="form-control" accept="image/*" method="post">
                             </div>
                             <label class="secLabel">Pizza score:</label>
                             <select name="pizzaScore" required method="post"><option value="1/10">1</option>
@@ -103,7 +122,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="secLabel">Comments:</label><textarea name="comment" class="form-control" method="post" >How was your pizza? Don't hold back...</textarea>
+                                <label class="secLabel">Comments:</label><textarea name="comment" class="form-control" method="post">How was your pizza? Don't hold back...</textarea>
                             </div>
                             <div class="form-group">
                                 <button id="pcFormSubmit" class="btn btn-default">Make Pizza Card</button>
@@ -123,18 +142,21 @@
         <div class="row" id="mainContent">
             <!--    Profile bar-->
             <div class="col-lg-3 col-lg-push-1 profile">
-                <h2>OdorousMaximus</h2>
-                <div class="userPhoto"><img src="Assets/darthvader.jpg" alt="User">
+
+                <h2>
+                    <?php echo $u ?>
+                </h2>
+                <div class="userPhoto"><img src="<?php echo $i ?>" alt="User">
                 </div>
                 <div id="pizzaScoreContainer">
-                    <h3>Pizza Score:</h3>
+                    <h3>Pizza Count:</h3>
                     <div class="pizzaCounter">
                         <div class="pizzaNum">17</div>
                     </div>
                 </div>
 
                 <div class="bioText">
-                    Native to the swamps of rural Louisiana, I first experienced pizza when searching for new and exciting ways to deploy alligator meat across my daily cuisine. Since become quite fond of arugula. Moved to NYC to make it in the world of competitive dance.
+                    <?php echo $b ?>
                 </div>
                 <button type="button" class="cardAddBtn" data-toggle="modal" data-target="#myModal">
                     <div class="addBtnTxt">

@@ -1,14 +1,23 @@
-<? session_start(); ?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
     
     <head>
     <title>Login | Pizza Journal</title>
-    <?php require_once "head.php" ?>
-        </head>
+        <?php require_once "head.php" ?>
+        <style>
+            #loginBox #loginBiz {
+                display: <?php echo($_SESSION['error']); ?>;
+            }
+            #loginBox #login #failure {
+                display: <?php echo($_SESSION['error']); ?>;
+            }
+        </style>
+    </head>
 <body>
-
+    
+    
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-lg-push-3" id="loginBox">
@@ -21,23 +30,25 @@
                 <div id="login">
                     <h1>Login</h1>
                     <div id="loginBiz">
-                        <form id="logForm" action="login.php" method="post">
+                        <form id="logForm" action="loginprocess.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label>Username</label>
+                               <div id="failure">
+                                The username and password you entered don't appear to be in our records.
+                                </div> <label>Username</label>
                                 <input class="form-control" type="text" name="un" id="un" required>
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
                                 <input class="form-control" type="password" name="pw" id="pw" required>
                             </div>
-                            <button type="submit" class="btn btn-default">Sign in</button>
+                            <button type="submit" name="submit" value="submit" class="btn btn-default">Sign in</button>
                         </form>
                     </div>
                 </div>
                 <div id="register">
                     <h1>Register</h1>
                     <div id="regBiz">
-                        <form id="regForm" method="post" action="registerprocess.php">
+                        <form id="regForm" method="post" action="registerprocess.php" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label>Email</label>
                                 <input class="form-control" type="email" name="newem" id="newem"  required>
