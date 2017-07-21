@@ -2,21 +2,9 @@
 
 <?php 
     $u = $_SESSION["user"];
+    $i = $_SESSION["img"];
     $p = file("Users/$u/profile.txt");
     $b = $p[1];
-     
-    //Make sure to come back and fix this!!
-    $scan = scandir("Users/$u/");
-                
-//    print_r($scan);
-                
-    foreach($scan as $file) {
-        if($file == "image.jpg" || "image.jpeg" || "image.png" || "image.gif"){
-            $file = $_SESSION["img"] = $i;
-//            print_r($file);
-        }
-    }
-         
     ?>
 
 <!DOCTYPE html>
@@ -73,51 +61,51 @@
   <option value="10/10">10</option>
 </select>
                             <div class="form-group">
-                                <div class="checkbox">
-                                    <label class="secLabel">Cheese</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="greasy" method="post" >Greasy</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="stringy" method="post" >Stringy</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="salty" method="post" >Salty</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="creamy" method="post" >Creamy</label>
+                    <div class="checkbox">
+                <label class="secLabel">Cheese</label>
+                <label class="checkbox-inline"><input type="checkbox" value="greasy" name="cheese[]" >Greasy</label>
+                <label class="checkbox-inline"><input type="checkbox" value="stringy" name="cheese[]">Stringy</label>
+                <label class="checkbox-inline"><input type="checkbox" value="salty" name="cheese[]">Salty</label>
+                <label class="checkbox-inline"><input type="checkbox" value="creamy" name="cheese[]">Creamy</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="checkbox">
-                                    <label class="secLabel">Sauce</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="thick" method="post" >Thick</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="thin" method="post" >Thin</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="salty" method="post" >Salty</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="savory" method="post" >Savory</label>
+                            <label class="secLabel">Sauce</label>
+                            <label class="checkbox-inline"><input type="checkbox" value="thick" name="sauce[]" >Thick</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="thin" name="sauce[]" >Thin</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="salty" name="sauce[]"  >Salty</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="savory" name="sauce[]" >Savory</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="secLabel">Crust</label>
                                 <div class="radio">
-                                    <label class="radio-inline"><input type="radio" name="thin" method="post" >Thin</label>
-                                    <label class="radio-inline"><input type="radio" name="medium" method="post" >Medium</label>
-                                    <label class="radio-inline"><input type="radio" name="thick" method="post" >Thick</label>
+                                    <label class="radio-inline"><input type="radio" value="thin" name="crust">Thin</label>
+                                    <label class="radio-inline"><input type="radio" value="medium" name="crust" >Medium</label>
+                                    <label class="radio-inline"><input type="radio" value="thick" name="crust">Thick</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="checkbox">
                                     <label class="secLabel">Toppings</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="pepperoni" method="post" >Pepperoni</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="olives" method="post" >Olives</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="mushrooms" method="post" >Mushrooms</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="peppers" method="post" >Bell peppers</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="ham" method="post" >Ham</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="Pineapple" method="post" >Pineapple</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="anchovies" method="post" >Anchovies</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="egg" method="post" >Egg</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="chicken" method="post" >Chicken</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="sausage" method="post" >Sausage</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="garlic" method="post" >Garlic</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="bpeppers" method="post" >Banana peppers</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="feta" method="post">Feta cheese</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="pine" method="post" >Pine nuts</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="artichoke" method="post" >Artichoke</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="pepperoni" name="toppings[]">Pepperoni</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="olives" name="toppings[]">Olives</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="mushrooms" name="toppings[]">Mushrooms</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="peppers" name="toppings[]">Bell peppers</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="ham"  name="toppings[]">Ham</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="Pineapple"  name="toppings[]">Pineapple</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="anchovies" name="toppings[]">Anchovies</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="egg" name="toppings[]">Egg</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="chicken" name="toppings[]">Chicken</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="sausage" name="toppings[]">Sausage</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="garlic" name="toppings[]">Garlic</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="bpeppers" name="toppings[]">Banana peppers</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="feta" name="toppings[]">Feta cheese</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="pine" name="toppings[]">Pine nuts</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="artichoke" name="toppings[]">Artichoke</label>
                                     <label class="chechecbox-inline">
-                                        <input type="checkbox" value="other" method="post" ><input type="text" name="other-top" value="Other">
+                                        <input type="checkbox" value="other" name="toppings[]"><input type="text" name="other-top" value="Other">
                                     </label>
                                 </div>
                             </div>
@@ -139,6 +127,7 @@
 
         <?php require_once "pmodal.php"; ?>
 
+<!--        Main content-->
         <div class="row" id="mainContent">
             <!--    Profile bar-->
             <div class="col-lg-3 col-lg-push-1 profile">
@@ -368,6 +357,7 @@
 
     <?php require_once "footer.php"; ?>
 
+    <script src="js/ajax.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="inputAni.js"></script>

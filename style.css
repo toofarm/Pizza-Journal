@@ -377,6 +377,7 @@ footer {
   background-color: #ffb042;
   border-radius: 20px;
   margin-top: 15%;
+  margin-bottom: 100px;
   padding: 0px;
   height: auto; }
   #loginBox #loginHead {
@@ -441,6 +442,13 @@ footer {
       background-color: #fff; }
       #loginBox #register #regBiz #regForm {
         padding: 15px; }
+        #loginBox #register #regBiz #regForm #failure2 {
+          text-align: center;
+          font-family: "Abel", "sans-serif";
+          color: red;
+          font-size: 17px;
+          font-style: italic;
+          display: none; }
         #loginBox #register #regBiz #regForm label {
           font-family: "Lato", "sans-serif";
           font-size: 30px;

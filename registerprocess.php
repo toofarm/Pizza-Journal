@@ -29,16 +29,22 @@
 
 //    Log image files to server
     
-    $file_size = $_FILES["upic"]["size"];
-
-    if($file_size > 2097152){
-         $message = 'Image file too large. Your profile photo must be smaller than 2 megabytes.'; 
-        echo '<script type="text/javascript">alert("'.$message.'");</script>'; 
-    }
     
-    if($_FILES) {
+    if($_FILES) { 
         
-        switch($_FILES["upic"]["type"]) {
+    $file_size = filesize($_FILES["upic"]["tmp_name"]);
+
+    if($file_size > 2097152) {
+
+        $_SESSION['regerror'] = "block";
+            
+        header('location: landing.php');
+        
+        $exit();
+    }
+        
+        
+    switch($_FILES["upic"]["type"]) {
         case "image/jpeg": 
             $x = "jpg";
             break;
@@ -55,28 +61,30 @@
         default:
             $x = "";
             break;
-    }
+                }
     
     if ($x) {
         $j = $_FILES["upic"]["tmp_name"];
          $_SESSION["img"] = $i = "users/$u/image.$x";
         
-        
-
          move_uploaded_file($j, $i);
+        
+        header('location: profile.php');
+        
     } 
     } else {
-        $message = 'Please upload a JPG, PNG, or GIF that is smaller than 2MB.'; 
-        echo '<script type="text/javascript">alert("'.$message.'");</script>';
+        
+        $_SESSION['regerror'] = "block";
+            
+        header('location: landing.php');
         
     };
 
 //    Put login info in database
+//Put the name of the image into the database
 $c = mysqli_connect("localhost", "root", "root", "pcUseBase");
 
-$q = "INSERT into pcU(usename, pw, em) VALUES('$u', '$p', '$e');";
-
-header('location: profile.php');
+$q = "INSERT into pcU(usename, pw, em, image) VALUES('$u', '$p', '$e', '$i');";
 
 mysqli_query($c, $q);
 

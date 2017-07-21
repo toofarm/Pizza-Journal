@@ -19,6 +19,7 @@
             $_SESSION["user"] = $a["usename"];
             $_SESSION["em"] = $a["em"];
             $_SESSION["p"] = $a["pw"];
+            $_SESSION["img"] = $a["image"];
             
             header('location: profile.php');
             
