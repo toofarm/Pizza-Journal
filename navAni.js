@@ -1,4 +1,6 @@
 var w = $(window).width();
+var scrollBottom = $(document).height() - ($(window).height() + $('body').scrollTop());
+var pCount = $('#pcHolder > .pizzaCard').length;
 
 function navResize() {
     if (w > 767) {
@@ -8,9 +10,37 @@ function navResize() {
 
         if ($('#navSmall').css("display") === 'block' && $(document).scrollTop() < 190) {
             $('#navSmall').slideUp();
-            console.log('pizza pie');
         };
 
+    }
+    
+    //This bit makes the profile bar sticky on scroll
+    if (w > 1230 && $("#welcome").css("display") == "none") {
+        
+        if ($(window).scrollTop() > 176) {
+        $(".profile").css("position", "fixed").animate({top: "75px"});
+        $("#cardCol").removeClass("col-lg-push-1").addClass("col-lg-push-4");
+        } 
+        
+        if ($(".profile").css("position") == "fixed" && $(window).scrollTop() < 176) {
+            
+        $(".profile").stop(true, true).animate({top: "0px"}).css("position", "relative");
+            
+        $("#cardCol").removeClass("col-lg-push-4").addClass("col-lg-push-1");
+        }
+        
+        
+        if ($(".profile").css("position") == "fixed" && scrollBottom < 190) {
+            $(".profile").stop(true, true).animate({top: "-175px"});
+            
+        }
+
+        if ($('.emMessage').css('display') == "inline-block") {
+            if (scrollBottom < 100) {
+            $(".profile").stop(true, true).animate({top: "-375px"});
+            } 
+        }
+        
     }
 
 };
@@ -24,8 +54,8 @@ $(window).resize(function () {
 
 $(window).scroll(function () {
     w = $(window).width();
+    scrollBottom = $(document).height() - ($(window).height() + $('body').scrollTop());
     navResize();
-    console.log($(document).scrollTop());
 });
 
 //Contact page animation

@@ -1,3 +1,11 @@
+@media (max-width: 1370px) {
+  #bigun #mainContent .profile .userPhoto {
+    height: 135px;
+    width: 135px; }
+  #bigun #mainContent .profile #pizzaScoreContainer {
+    position: absolute;
+    top: 205px;
+    right: 5%; } }
 @media (max-width: 1280px) {
   #bigun #mainContent .profile .userPhoto {
     height: 140px;
@@ -137,7 +145,10 @@
     position: static; }
   #bigun #mainContent .profile #pizzaScoreContainer {
     position: static;
-    margin-top: -135px; } }
+    margin-top: -135px; }
+
+  #loginBox {
+    margin-top: 150px; } }
 @media (max-width: 360px) {
   #navLarge .navbar-nav {
     font-size: 25px;

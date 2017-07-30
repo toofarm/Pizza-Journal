@@ -1,3 +1,21 @@
+@media (max-width: 1370px) {
+    #bigun {
+        #mainContent {
+            .profile {
+                    .userPhoto {
+                        height: 135px;
+                        width: 135px;
+                    }
+                #pizzaScoreContainer {
+                    position: absolute;
+                    top: 205px;
+                    right: 5%;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1280px) {
     #bigun {
         #mainContent {
@@ -268,6 +286,10 @@
                 }
             }
         }
+    }
+    
+    #loginBox {
+        margin-top: 150px;
     }
 }
 

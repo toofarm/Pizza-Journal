@@ -6,15 +6,25 @@
     $b = $_POST["bio"];
 
 //    Create email
-    $m = "Welcome to Pizza Journal! Here's the user info you entered:<br>Username:&nbsp;$u<br>Password:&nbsp;$p<br><br>We're looking forward to hearing about your pizza adventures.<br><br>Best,<br>Your pals at Pizza Journal<br>--<br>www.PizzaJournal.com";
-        
-    $s = "Congrats on registering for Pizza Journal";
+    $m = "
+    Welcome to Pizza Journal! Here's the user info you entered:
+    
+    Your name: $u
 
-    $t = "toofarm@gmail.com";
+    Your passcode: $p
+    
+    We're looking forward to hearing about your pizza adventures.
+    
+    Best,
+    Your pals at Pizza Journal";
+        
+    $s = "Congrats on registering for Pizza Journal!";
+
+    $t = "pizzajournal@gmail.com";
 
     $h = "From: ".$t."\r\n"."Reply-To: ".$t."\r\n".'X-Mailer: PHP/'.phpversion();
 
-    mail($t, $s, $m, $h);
+    mail($e, $s, $m, $h);
 
 //    Create user file on server
     mkdir("Users/$u");
@@ -65,7 +75,7 @@
     
     if ($x) {
         $j = $_FILES["upic"]["tmp_name"];
-         $_SESSION["img"] = $i = "users/$u/image.$x";
+         $_SESSION["img"] = $i = "Users/$u/image.$x";
         
          move_uploaded_file($j, $i);
         
@@ -82,9 +92,9 @@
 
 //    Put login info in database
 //Put the name of the image into the database
-$c = mysqli_connect("localhost", "root", "root", "pcUseBase");
+$c = mysqli_connect("localhost", "fssa", "Webdevfun1!", "fssa");
 
-$q = "INSERT into pcU(usename, pw, em, image) VALUES('$u', '$p', '$e', '$i');";
+$q = "INSERT into pizzajournalUsers(usename, pw, em, image) VALUES('$u', '$p', '$e', '$i');";
 
 mysqli_query($c, $q);
 

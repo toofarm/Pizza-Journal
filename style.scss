@@ -54,7 +54,9 @@
             color: $darkGrey;
             cursor: pointer;
         }
-    } //Begin actual styles
+    }
+
+    //Begin actual styles
     body {
         background-color: $bodyTan;
         margin: 0px;
@@ -110,6 +112,10 @@
                 text-align: center;
                 height: auto;
                 height: 50px;
+            }
+            li a:hover {
+                color: $lightGrey;
+                text-decoration: none;
             }
         }
     }
@@ -189,7 +195,7 @@
 
     #bigun {
         width: auto;
-        
+
         #myModal {
             .modal-content {
                 .modal-header {
@@ -206,6 +212,11 @@
                         font-size: 20px;
                         display: block;
                         width: 100%;
+                    }
+                    #picFail {
+                        color: red;
+                        font-style: italic;
+                        display: none;
                     }
                     button {
                         background-color: $lightGrey;
@@ -289,6 +300,8 @@
                     border-left: 3px solid $darkGrey;
                     font-size: 25px;
                     padding: 0px 20px;
+                    max-height: 15em;
+                    overflow: scroll;
                 }
                 .cardAddBtn {
                     width: 200px;
@@ -341,6 +354,44 @@
                 #tasty:hover {
                     text-decoration: underline;
                     cursor: pointer;
+                }
+
+                #welcome {
+                    text-align: center;
+                    border: 2px solid #c0d6f9;
+                    background-color: #f9fafc;
+                    margin-bottom: 15px;
+                    display: none;
+                    h3 {
+                        font-family: $headFont;
+                        font-size: 60px;
+                        padding: 15px;
+                    }
+                    #welcomeList {
+                        width: 80%;
+                        margin: 0px auto;
+                        border-top: 2px solid $lightGrey;
+                        h4 {
+                            font-size: 25px;
+                            padding: 10px;
+                        }
+                        h6 {
+                            font-size: 16px;
+                            border-bottom: 2px solid $lightGrey;
+                            padding: 17px;
+                        }
+                        img {
+                            width: 70px;
+                            padding: 10px;
+                        }
+                        ul {
+                            text-align: left;
+                            li {
+                                padding: 8px;
+                                font-size: 17px;
+                            }
+                        }
+                    }
                 }
 
                 .cardAdd {
@@ -419,7 +470,6 @@
                         .thickCrust {
                             @include crustBox;
                             height: 60px;
-                            background-color: $darkGrey;
                         }
                     }
 
@@ -453,6 +503,8 @@
         background-color: #FFCA80;
         height: auto;
         margin: 15px 0px 0px 0px;
+        position: relative;
+        z-index: 5;
         #footR {
             border-right: 2px solid black;
             margin: 20px 0px;
@@ -514,13 +566,12 @@
                 color: $lightGrey;
             }
         }
-    }
-
-    //Landing page styles
+    } //Landing page styles
     #loginBox {
         background-color: $darkOrange;
         border-radius: 20px;
         margin-top: 15%;
+        margin-bottom: 100px;
         padding: 0px;
         height: auto;
         #loginHead {
@@ -553,6 +604,14 @@
         #login {
             @include logreg;
             border-bottom: 2px solid $lightGrey;
+            #failure {
+                text-align: center;
+                font-family: $bodyFont;
+                color: red;
+                font-size: 17px;
+                font-style: italic;
+                display: none;
+            }
         }
         #register {
             @include logreg;
@@ -564,6 +623,14 @@
                 background-color: #fff;
                 #regForm {
                     padding: 15px;
+                    #failure2 {
+                        text-align: center;
+                        font-family: $bodyFont;
+                        color: red;
+                        font-size: 17px;
+                        font-style: italic;
+                        display: none;
+                    }
                     label {
                         font-family: $headFont;
                         font-size: 30px;
@@ -611,9 +678,7 @@
                 display: none;
             }
         }
-    }
-
-    //Contact page styles
+    } //Contact page styles
     #resumeBox {
         border: 3px solid $superDarkOrange;
         border-radius: 20px;

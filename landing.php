@@ -13,6 +13,12 @@
             #loginBox #login #failure {
                 display: <?php echo($_SESSION['error']); ?>;
             }
+            #loginBox #register #regBiz #regForm #failure2 {
+                display: <?php echo($_SESSION['regerror']); ?>;
+            }
+            #loginBox #register #regBiz {
+                display: <?php echo($_SESSION['regerror']); ?>;
+            }
         </style>
     </head>
 <body>
@@ -66,6 +72,7 @@
                                 <textarea class="form-control" name="bio" id="bio" maxlength="500" required>This short bio will display on your profile page. 500 characters or less, please!</textarea>
                             </div>
                             <div class="form-group">
+                                <div id="failure2">Please upload a JPG, PNG, or GIF that is less than 2MB.</div>
                                 <label>Upload a photo</label>
                                 <input class="form-control" type="file" name="upic" id="upic" accept="image/*" required>
                             </div>
@@ -84,6 +91,7 @@
         </div>
     </div>
 
+    <script src="js/ajax.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="inputAni.js"></script>

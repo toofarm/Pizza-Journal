@@ -14,11 +14,8 @@ $('#em').focus(function () {
 });
 
 
-
-
 $('#send').click(function () {
     if ($('#em').is(':valid')) {
         $('#sent').css("display", "block");
-        console.log('Sent!');
     }
 });

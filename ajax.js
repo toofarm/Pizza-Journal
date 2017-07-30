@@ -13,7 +13,16 @@ $('document').ready(function () {
             },
             success: function(data){
                 $.each(data, function(i, v) {
-                    $("#pcHolder").append('<div class="pizzaCard" id='+v.globeid+'></div>');
+                    $("#pcHolder").append('<div class="pizzaCard" id="'+v.globeid+'"></div>');
+                    
+                    $("#p"+v.globeid"").append('<h2 class="pizzaTitle"> <span class="pizzaName">'+v.pizzaname+'</span><span class="pizzaScore">'+v.score+'/10</span></h2>');
+                    
+                    
+                    $("#p"+v.globeid"").append('<div class="cardFlex"></div>');
+                    
+                    $(".cardFlex").append('<div><div class="pizzaPhoto"> <img src="'+$i+'" alt="Pizza!"></div><ul class="basics"><li class="restaurant"> '+v.restaurant+'</li><li class="date">'+v.date+'</li></ul></div>');
+                    
+                    
                 });
             },
         });

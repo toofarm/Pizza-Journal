@@ -116,6 +116,10 @@ body {
       font-size: 20px;
       display: block;
       width: 100%; }
+    #bigun #myModal .modal-content .modal-body #picFail {
+      color: red;
+      font-style: italic;
+      display: none; }
     #bigun #myModal .modal-content .modal-body button {
       background-color: #DDDDDD;
       font-size: 17px; }
@@ -175,7 +179,9 @@ body {
         font-family: "Abel", "sans-serif";
         border-left: 3px solid #666666;
         font-size: 25px;
-        padding: 0px 20px; }
+        padding: 0px 20px;
+        max-height: 15em;
+        overflow: scroll; }
       #bigun #mainContent .profile .cardAddBtn {
         width: 200px;
         height: 100px;
@@ -216,6 +222,35 @@ body {
       #bigun #mainContent #cardCol #tasty:hover {
         text-decoration: underline;
         cursor: pointer; }
+      #bigun #mainContent #cardCol #welcome {
+        text-align: center;
+        border: 2px solid #c0d6f9;
+        background-color: #f9fafc;
+        margin-bottom: 15px;
+        display: none; }
+        #bigun #mainContent #cardCol #welcome h3 {
+          font-family: "Lato", "sans-serif";
+          font-size: 60px;
+          padding: 15px; }
+        #bigun #mainContent #cardCol #welcome #welcomeList {
+          width: 80%;
+          margin: 0px auto;
+          border-top: 2px solid #DDDDDD; }
+          #bigun #mainContent #cardCol #welcome #welcomeList h4 {
+            font-size: 25px;
+            padding: 10px; }
+          #bigun #mainContent #cardCol #welcome #welcomeList h6 {
+            font-size: 16px;
+            border-bottom: 2px solid #DDDDDD;
+            padding: 17px; }
+          #bigun #mainContent #cardCol #welcome #welcomeList img {
+            width: 70px;
+            padding: 10px; }
+          #bigun #mainContent #cardCol #welcome #welcomeList ul {
+            text-align: left; }
+            #bigun #mainContent #cardCol #welcome #welcomeList ul li {
+              padding: 8px;
+              font-size: 17px; }
       #bigun #mainContent #cardCol .cardAdd {
         display: flex;
         flex-flow: column;
@@ -301,8 +336,7 @@ body {
             margin: 7px 0px;
             font-family: "Lato", "sans-serif";
             font-size: 20px;
-            height: 60px;
-            background-color: #666666; }
+            height: 60px; }
         #bigun #mainContent .pizzaCard .cardFlex .useCom {
           min-width: 100px;
           margin: 15px; }
@@ -324,7 +358,9 @@ body {
 footer {
   background-color: #FFCA80;
   height: auto;
-  margin: 15px 0px 0px 0px; }
+  margin: 15px 0px 0px 0px;
+  position: relative;
+  z-index: 5; }
   footer #footR {
     border-right: 2px solid black;
     margin: 20px 0px; }
