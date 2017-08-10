@@ -40,11 +40,33 @@
         bottom: 10px;
         right: 5%; }
 
+  #useEdit #editBox #formBigFlex {
+    display: block; }
+    #useEdit #editBox #formBigFlex #picBox {
+      margin: 0px 5%;
+      height: auto;
+      width: 90%; }
+      #useEdit #editBox #formBigFlex #picBox img {
+        width: 100%;
+        max-width: 3000px; }
+    #useEdit #editBox #formBigFlex #editFlex {
+      margin: 0px 5%;
+      width: 90%; }
+      #useEdit #editBox #formBigFlex #editFlex #un {
+        width: 90%; }
+
   footer #footR form textarea {
     display: block;
     margin-bottom: 15px;
     height: 220px;
-    width: 290px; } }
+    width: 290px; }
+
+  #profileCol {
+    margin: 10px auto;
+    padding-bottom: 10px;
+    border-right: none;
+    border-bottom: 2px solid #666666;
+    width: 85%; } }
 @media (max-width: 800px) {
   #navLarge .navbar-header {
     margin-left: 43%;
@@ -87,7 +109,21 @@
           padding-left: 220px;
           font-size: 30px; }
     #navLarge .navbar-nav {
-      margin: -86px 0px 0px -10px; }
+      margin: -86px 0px 0px -10px;
+      display: none; }
+    #navLarge #navMobile {
+      display: block;
+      padding-top: 50px; }
+      #navLarge #navMobile i {
+        display: none; }
+      #navLarge #navMobile #mob-nav-dropdown {
+        list-style: none;
+        display: inline-block;
+        padding: 0px;
+        position: relative;
+        font-size: 20px; }
+        #navLarge #navMobile #mob-nav-dropdown li {
+          border-right: 1px solid white; }
 
   #bigun #mainContent .profile .userPhoto {
     position: absolute;
@@ -95,20 +131,18 @@
     bottom: -10px; } }
 @media (max-width: 732px) {
   #navLarge .navbar-nav {
-    margin: -87px 0px 0px -40px; } }
+    margin: -87px 0px 0px -40px; }
+
+  #useEdit #editBox #picBox label .overlay .text {
+    left: 33%; } }
 @media (max-width: 667px) {
   #bigun #mainContent .profile .userPhoto {
     position: absolute;
     right: 31%; } }
 @media (max-width: 640px) {
-  #navLarge .navbar-nav {
-    margin: -80px 0px 0px -40px;
-    font-size: 25px; } }
+  #navLarge #navMobile {
+    padding-top: 0px; } }
 @media (max-width: 568px) {
-  #navLarge .navbar-nav {
-    margin: -138px -15px 0px 0px;
-    font-size: 25px; }
-
   #bigun #mainContent .profile .userPhoto {
     position: absolute;
     right: 34%; }
@@ -124,15 +158,44 @@
       text-align: center; } }
 @media (max-width: 480px) {
   #navLarge {
-    height: 200px; }
+    height: 200px;
+    position: relative; }
+    #navLarge form {
+      position: absolute;
+      top: none;
+      left: 0px;
+      right: 104px;
+      bottom: 20px; }
     #navLarge .navbar-header {
-      margin-top: -37px;
-      margin-left: 36%; }
-    #navLarge .navbar-nav {
-      position: relative;
-      width: 70%;
-      margin: -282px 10%;
-      font-size: 30px; }
+      bottom: -70px;
+      margin-left: 36%;
+      position: absolute; }
+    #navLarge #navMobile {
+      width: 100%;
+      display: block; }
+      #navLarge #navMobile i {
+        display: block;
+        color: white;
+        top: 20px;
+        left: 20px;
+        position: absolute; }
+      #navLarge #navMobile #mob-nav-dropdown {
+        background-color: #de9939;
+        position: absolute;
+        top: 65px;
+        left: 0px;
+        width: 100%;
+        -moz-box-shadow: inset 0 2px 5px #666;
+        -webkit-box-shadow: inset 0 2px 5px #666;
+        box-shadow: inset 0 2px 5px #666;
+        display: none; }
+        #navLarge #navMobile #mob-nav-dropdown li {
+          font-size: 30px;
+          border: none; }
+        #navLarge #navMobile #mob-nav-dropdown li a:hover {
+          color: #555;
+          text-decoration: none;
+          background-color: #de9939; }
     #navLarge form {
       width: 250px;
       margin: 60px 0px 0px 45px; }
@@ -148,7 +211,10 @@
     margin-top: -135px; }
 
   #loginBox {
-    margin-top: 150px; } }
+    margin-top: 150px; }
+
+  #useEdit #editBox #picBox label .overlay .text {
+    left: 15%; } }
 @media (max-width: 360px) {
   #navLarge .navbar-nav {
     font-size: 25px;
@@ -164,6 +230,11 @@
 @media (max-width: 320px) {
   #navLarge form {
     margin: 60px 0px 0px 0px; }
+
+  #useEdit #editBox #picBox label .overlay {
+    height: 60px; }
+    #useEdit #editBox #picBox label .overlay .text {
+      left: 7%; }
 
   #bigun #mainContent .profile .userPhoto {
     height: 120px;

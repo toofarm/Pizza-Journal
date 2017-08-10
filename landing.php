@@ -69,7 +69,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Tell us a little bit about yourself</label>
-                                <textarea class="form-control" name="bio" id="bio" maxlength="500" required>This short bio will display on your profile page. 500 characters or less, please!</textarea>
+                                <textarea class="form-control" name="bio" id="bio" maxlength="250" required>This short bio will display on your profile page. 250 characters or less, please!</textarea>
                             </div>
                             <div class="form-group">
                                 <div id="failure2">Please upload a JPG, PNG, or GIF that is less than 2MB.</div>
@@ -84,7 +84,7 @@
                 <div id="landingFoot">
                     <h4>Wait, what's this about?</h4>
                     <div id="footCopy">
-                        Pizza Journal lets you keep track of the pizza you eat. You can upload photos of your pizza, describe what it tasted like, and share your pizza adventures with your friends. It's free, easy, and pretty cool.<br><br>Developed by Shane Danaher &copy;2017
+                        Pizza Journal lets you keep track of the pizza you eat. You can upload photos of your pizza, describe what it tasted like, and share your pizza adventures. It's free, easy, and pretty cool.<br><br>Developed by Shane Danaher
                     </div>
                 </div>
             </div>

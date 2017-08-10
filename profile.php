@@ -1,11 +1,14 @@
-<?php session_start(); ?>
-
 <?php 
+    session_start();
     $u = $_SESSION["user"];
     $i = $_SESSION["img"];
     $p = file("Users/$u/profile.txt");
     $b = $p[1];
-    ?>
+
+        if ($u == null) {
+        header('location: landing.php');
+    }
+?>
 
 <!DOCTYPE html>
 <html>
@@ -162,20 +165,19 @@
 
 
             <!--    Card stack-->
-            <div class="col-lg-8 col-lg-push-1" id="cardCol">
+            <div class="col-lg-8 col-lg-push-1 cardCol">
                 <div class="orderToggle">
-                    <h2><span id="date">Date</span> | <span id="tasty">Tastiness</span></h2>
+                    <h2><span id="date">Date</span> | <span id="tasty">Tastiness</span> <i id="clear" class="fa fa-times" aria-hidden="true"></i></h2>
                 </div>
 
                 <div id="welcome">
                     <h3>Howdy</h3>
-                    <!--                    <i class="fa fa-cutlery" aria-hidden="true"></i>-->
                     <div id="welcomeList">
                         <h4>Welcome to Pizza Journal, where you can...</h4>
                         <ul>
                             <li>Keep track of and compare the pizza you eat</li>
                             <li>Upload pictures of your pizza</li>
-                            <li>Check out pizza that your friends eating</li>
+                            <li>Check out pizza that your friends are eating</li>
                         </ul>
                         <h6>Click "Add more pizza" or "Create new pizza card" to start adding pizza</h6>
                         <img src="Assets/pizzamoji.png" alt="Pizza">
@@ -203,7 +205,6 @@
     <script src="navAni.js"></script>
     <script src="mailerAni.js"></script>
     <script src="modalAni.js"></script>
-    <script src="activeAni.js"></script>
     <script src="cardSort.js"></script>
     <!-- For calendar display in Firefox -->
     <script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
@@ -285,7 +286,7 @@
                             //Sauce
                             $("#" + v.globeid + " > .cardFlex > .rankings").append("<h4>Sauce</h4><div class='rankBox'><div class='rankItem'><i id='sthick' class='fa fa-circle-o' aria-hidden='true'></i><p>Thick</p></div><div class='rankItem'><i id='sthin' class='fa fa-circle-o' aria-hidden='true'></i><p>Thin</p></div><div class='rankItem'><i id='ssalty' class='fa fa-circle-o' aria-hidden='true'></i><p>Salty</p></div><div class='rankItem'><i id='ssavory' class='fa fa-circle-o' aria-hidden='true'></i><p>Savory</p></div></div>");
 
-                            for (i = 0; i < v.sauce.length; ++i) {
+                            for (i = 0; i <= v.sauce.length; ++i) {
                                 if (v.sauce.indexOf("thick") > -1) {
                                     $("#" + v.globeid + " " + "#sthick").removeClass("fa-circle-o").addClass("fa-circle");
                                 } else if (v.sauce.indexOf("thin") > -1) {

@@ -4,10 +4,10 @@
         $un = $_POST["un"];
         $p = $_POST["pw"];
         
-        $c = mysqli_connect('localhost', "fssa", "Webdevfun1!", "fssa");
+        $c = mysqli_connect('localhost', "fssa", "Webdevfun1", "pizzajournalUsers");
         
         //This is saying, "Select all the rows that meet these two conditions"
-        $q = "select * from pizzajournalUsers where pw='$p' and usename='$un'";
+        $q = "select * from pcU where pw='$p' and usename='$un'";
         
         $l = mysqli_query($c, $q);
         

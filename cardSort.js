@@ -12,6 +12,7 @@ $(mylist).append(listitems);
 $("#date").removeClass("sortActive");
 $("#tasty").addClass("sortActive");
     
+$("#clear").css("display", "inline-block");
 
 });
 
@@ -29,4 +30,14 @@ $(mylist).append(listitems);
 $("#tasty").removeClass("sortActive");
 $("#date").addClass("sortActive");
     
+$("#clear").css("display", "inline-block");
+    
+});
+
+$("#clear").click(function () {
+    $(".pizzaCard").remove();
+    cardAdd();
+    $("#clear").css("display", "none");
+    $("#tasty").removeClass("sortActive");
+    $("#date").removeClass("sortActive");
 });

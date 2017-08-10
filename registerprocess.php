@@ -16,7 +16,10 @@
     We're looking forward to hearing about your pizza adventures.
     
     Best,
-    Your pals at Pizza Journal";
+    Your pals at Pizza Journal
+    --
+    citytechcedev.org/fssa/sdanaher/landing.php
+    ";
         
     $s = "Congrats on registering for Pizza Journal!";
 
@@ -92,9 +95,9 @@
 
 //    Put login info in database
 //Put the name of the image into the database
-$c = mysqli_connect("localhost", "fssa", "Webdevfun1!", "fssa");
+$c = mysqli_connect("localhost", "fssa", "Webdevfun1", "pizzajournalUsers");
 
-$q = "INSERT into pizzajournalUsers(usename, pw, em, image) VALUES('$u', '$p', '$e', '$i');";
+$q = "INSERT into pcU(usename, pw, em, image) VALUES('$u', '$p', '$e', '$i');";
 
 mysqli_query($c, $q);
 

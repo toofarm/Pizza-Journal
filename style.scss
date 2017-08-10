@@ -1,636 +1,638 @@
-    $darkOrange: rgba(255, 176, 66, 1);
-    $superDarkOrange: rgba(222, 153, 57, 1);
-    $bodyTan: rgba(255, 227, 189, 1);
-    $lightTan: rgba(255, 202, 128, 1);
-    $lightGrey: #DDDDDD;
-    $darkGrey: #666666;
-    $headFont: 'Lato',
-    'sans-serif';
-    $bodyFont: 'Abel',
-    'sans-serif';
+        $darkOrange: rgba(255, 176, 66, 1);
+        $superDarkOrange: rgba(222, 153, 57, 1);
+        $bodyTan: rgba(255, 227, 189, 1);
+        $lightTan: rgba(255, 202, 128, 1);
+        $lightGrey: #DDDDDD;
+        $darkGrey: #666666;
+        $headFont: 'Lato',
+        'sans-serif';
+        $bodyFont: 'Abel',
+        'sans-serif';
 
-    @mixin plusStyle ($color, $size) {
-        color: $color;
-        font-size: $size;
-    }
-
-    @mixin pizzaCard {
-        border: 3px solid $superDarkOrange;
-        background-color: $lightTan;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    @mixin pizzaPhoto {
-        height: 230px;
-        width: 230px;
-        border: 2px solid $lightGrey;
-        border-radius: 150px;
-        margin: 10px;
-        overflow: hidden;
-    }
-
-    @mixin crustBox {
-        background-color: $lightGrey;
-        border-radius: 10px;
-        text-align: center;
-        width: 235px;
-        margin: 7px 0px;
-        font-family: $headFont;
-        font-size: 20px;
-    }
-
-    @mixin logreg {
-        text-align: center;
-        background-color: $lightTan;
-        color: #000;
-        width: 100%;
-        margin: 0px;
-        h1 {
-            font-size: 40px;
-            padding: 15px 0px;
-        }
-        h1:hover {
-            color: $darkGrey;
-            cursor: pointer;
-        }
-    }
-
-    //Begin actual styles
-    body {
-        background-color: $bodyTan;
-        margin: 0px;
-        overflow-x: hidden;
-    }
-
-    #navSmall {
-        background-color: $superDarkOrange;
-        height: 50px;
-        font-family: $headFont;
-        font-size: 25px;
-        border: 0px;
-        width: 100%;
-        position: fixed;
-        display: none;
-        box-shadow: 10px 0px 5px #888;
-        z-index: 4;
-
-        form {
-            margin-left: 7%;
-            margin-top: 0px;
-            input {
-                font-size: 20px;
-            }
-            button {
-                font-size: 15px;
-            }
+        @mixin plusStyle ($color, $size) {
+            color: $color;
+            font-size: $size;
         }
 
-        .navbar-header {
-            position: absolute;
-            width: auto;
-            display: inline-block;
-        }
-
-        .navbar-brand > img {
-            height: 65px;
-            width: auto;
-            display: inline-block;
-            margin-left: 10px;
-            margin-top: -20px;
-        }
-
-        .navbar-nav {
-            float: right;
-            position: absolute;
-            margin-left: 80%;
-            .myActive {
-                background-color: $darkOrange;
-            }
-            li a {
-                color: #fff;
-                text-align: center;
-                height: auto;
-                height: 50px;
-            }
-            li a:hover {
-                color: $lightGrey;
-                text-decoration: none;
-            }
-        }
-    }
-
-    #navLarge {
-        background-color: $darkOrange;
-        height: 100px;
-        font-family: $headFont;
-        font-size: 30px;
-        border: 0px;
-        width: 100%;
-        padding-top: 30px;
-        display: inline-block;
-        padding: 30px 10px 0px 0px;
-        z-index: 5;
-
-        form {
-            margin-top: 0px;
-            input {
-                font-size: 20px;
-            }
-            button {
-                font-size: 15px;
-                margin-top: 8px;
-            }
-        }
-
-        .navbar-header {
-            width: 170px;
-            margin-left: 44%;
-            margin-right: 50%;
-            margin-top: -71px;
-            display: inline-block;
-        }
-
-        .navbar-brand > img {
-            height: 150px;
-            width: auto;
-            display: inline-block;
-            margin-left: -26px;
-        }
-
-        .navbar-nav {
-            display: inline-block;
-            float: right;
-            margin-top: -165px;
-            .myActive {
-                background-color: $superDarkOrange;
-            }
-            th {
-                padding: 15px;
-            }
-            th a {
-                color: #fff;
-                text-align: center;
-                padding-bottom: 34px;
-            }
-            th a:hover {
-                color: $lightGrey;
-                text-decoration: none;
-            }
-        }
-    }
-
-    #logoBacker {
-        background-color: #fff;
-        height: 170px;
-        width: 170px;
-        border-radius: 170px;
-        border: 1px solid black;
-        display: inline-block;
-    }
-
-    #mainSearch {
-        margin-top: 5px;
-    }
-
-    #bigun {
-        width: auto;
-
-        #myModal {
-            .modal-content {
-                .modal-header {
-                    background-color: $darkOrange;
-                    .modal-title {
-                        font-family: $headFont;
-                        font-size: 25px;
-                    }
-                }
-                .modal-body {
-                    background-color: $bodyTan;
-                    .secLabel {
-                        font-family: $headFont;
-                        font-size: 20px;
-                        display: block;
-                        width: 100%;
-                    }
-                    #picFail {
-                        color: red;
-                        font-style: italic;
-                        display: none;
-                    }
-                    button {
-                        background-color: $lightGrey;
-                        font-size: 17px;
-                    }
-                    button:hover {
-                        background-color: aliceblue;
-                    }
-                }
-                .modal-footer {
-                    background-color: $lightTan;
-                }
-            }
-        }
-
-        #mainContent {
-            z-index: 3;
-            margin-top: 105px;
+        @mixin pizzaCard {
+            border: 3px solid $superDarkOrange;
+            background-color: $lightTan;
             height: auto;
+            margin-bottom: 20px;
+        }
 
-            .profile {
-                border-right: 2px solid black;
-                height: auto;
-                overflow: visible;
-                position: relative;
+        @mixin pizzaPhoto {
+            height: 230px;
+            width: 230px;
+            border: 2px solid $lightGrey;
+            border-radius: 150px;
+            margin: 10px;
+            overflow: hidden;
+        }
 
-                .userPhoto {
-                    height: 150px;
-                    width: 150px;
-                    border-radius: 100px;
-                    border: 4px solid $lightGrey;
-                    overflow: hidden;
-                    img {
-                        height: 150px;
-                        width: auto;
-                    }
+        @mixin crustBox {
+            background-color: $lightGrey;
+            border-radius: 10px;
+            text-align: center;
+            width: 235px;
+            margin: 7px 0px;
+            font-family: $headFont;
+            font-size: 20px;
+        }
+
+        @mixin logreg {
+            text-align: center;
+            background-color: $lightTan;
+            color: #000;
+            width: 100%;
+            margin: 0px;
+            h1 {
+                font-size: 40px;
+                padding: 15px 0px;
+            }
+            h1:hover {
+                color: $darkGrey;
+                cursor: pointer;
+            }
+        } //Begin actual styles
+        body {
+            background-color: $bodyTan;
+            margin: 0px;
+            overflow-x: hidden;
+        }
+
+        #navSmall {
+            background-color: $superDarkOrange;
+            height: 50px;
+            font-family: $headFont;
+            font-size: 25px;
+            border: 0px;
+            width: 100%;
+            position: fixed;
+            display: none;
+            box-shadow: 10px 0px 5px #888;
+            z-index: 4;
+
+            form {
+                margin-left: 7%;
+                margin-top: 0px;
+                input {
+                    font-size: 20px;
                 }
-
-                #pizzaScoreContainer {
-                    float: right;
-                    margin-top: -150px;
-
-                    h3 {
-                        color: $darkGrey;
-                        font-family: $headFont;
-                        margin: 0px 0px;
-                        font-size: 30px;
-                        right: 20px;
-                        top: 15px;
-                    }
-
-                    .pizzaCounter {
-                        width: 150px;
-                        height: 90px;
-                        border-radius: 10px;
-                        background-color: rgba(255, 176, 66, .7);
-                        border: 2px solid $superDarkOrange;
-                        top: 52px;
-                        right: 20px;
-                        padding: 5px;
-
-                        .pizzaNum {
-                            font-size: 50px;
-                            color: #fff;
-                            width: 20%;
-                            margin: 0px auto;
-                        }
-                    }
-                }
-
-                h2 {
-                    font-size: 35px;
-                    font-family: $headFont;
-                    color: $superDarkOrange;
-                    top: 160px;
-                }
-
-                .bioText {
-                    top: 245px;
-                    font-family: $bodyFont;
-                    border-left: 3px solid $darkGrey;
-                    font-size: 25px;
-                    padding: 0px 20px;
-                    max-height: 15em;
-                    overflow: scroll;
-                }
-                .cardAddBtn {
-                    width: 200px;
-                    height: 100px;
-                    background-color: $lightGrey;
-                    border: 3px solid $darkGrey;
-                    border-radius: 10px;
-                    margin-top: 15px;
-                    .addBtnTxt {
-                        color: $darkGrey;
-                        width: 120px;
-                        float: right;
-                        position: relative;
-                        text-align: center;
-                        padding: 6px;
-                        font-size: 21px;
-                        margin-top: 10px;
-                    }
-                    i {
-                        @include plusStyle($darkGrey, 54px);
-                        margin: 15px 0px 0px 0px;
-                    }
-                }
-                .cardAddBtn:hover {
-                    background-color: $darkGrey;
-                    border: 3px solid $lightGrey;
-                    cursor: pointer;
-                    i {
-                        @include plusStyle($lightGrey, 54px);
-                    }
-                    .addBtnTxt {
-                        color: $lightGrey;
-                    }
+                button {
+                    font-size: 15px;
                 }
             }
 
-            #cardCol {
-                padding: 0px 30px;
-                margin: 0px;
+            .navbar-header {
+                position: absolute;
+                width: auto;
+                display: inline-block;
+            }
 
-                .orderToggle {
-                    margin-top: -17px;
+            .navbar-brand > img {
+                height: 65px;
+                width: auto;
+                display: inline-block;
+                margin-left: 10px;
+                margin-top: -20px;
+            }
 
-                    .sortActive {
+            .navbar-nav {
+                float: right;
+                position: absolute;
+                margin-left: 80%;
+                .myActive {
+                    background-color: $darkOrange;
+                }
+                .open {
+                    background-color: $darkOrange;
+                    height: 50px;
+                }
+                li {
+                    a {
+                        font-size: 25px;
+                        color: #fff;
+                    }
+                    li {
+                        color: $darkGrey;
+                        padding: 10px;
+                    }
+                    a:hover {
+                        color: $darkGrey;
+                        text-decoration: none;
+                        background-color: $darkOrange;
+                        height: 50px;
+                    }
+                    ul a {
                         color: $darkGrey;
                     }
+                    ul a:hover {
+                        color: $darkGrey;
+                        text-decoration: none;
+                        background-color: $lightGrey;
+                        height: auto;
+                    }
                 }
+            }
+        }
 
-                #date:hover,
-                #tasty:hover {
-                    text-decoration: underline;
-                    cursor: pointer;
+        #navLarge {
+            background-color: $darkOrange;
+            height: 100px;
+            font-family: $headFont;
+            font-size: 30px;
+            border: 0px;
+            width: 100%;
+            padding-top: 30px;
+            display: inline-block;
+            padding: 30px 10px 0px 0px;
+            z-index: 5;
+
+            #navMobile {
+                display: none;
+                float: right;
+                margin: -165px 50px 0px 0px;
+                .myActive {
+                    background-color: $superDarkOrange;
                 }
-
-                #welcome {
+                li {
+                    padding: 0px 25px;
+                    margin: 0px 10px;
+                    ul {
+                        font-size: 25px;
+                        a {
+                            color: $darkGrey;
+                            padding: 10px;
+                        }
+                    }
+                }
+                li a {
+                    color: #fff;
                     text-align: center;
-                    border: 2px solid #c0d6f9;
-                    background-color: #f9fafc;
-                    margin-bottom: 15px;
-                    display: none;
-                    h3 {
-                        font-family: $headFont;
-                        font-size: 60px;
-                        padding: 15px;
-                    }
-                    #welcomeList {
-                        width: 80%;
-                        margin: 0px auto;
-                        border-top: 2px solid $lightGrey;
-                        h4 {
-                            font-size: 25px;
-                            padding: 10px;
-                        }
-                        h6 {
-                            font-size: 16px;
-                            border-bottom: 2px solid $lightGrey;
-                            padding: 17px;
-                        }
-                        img {
-                            width: 70px;
-                            padding: 10px;
-                        }
-                        ul {
-                            text-align: left;
-                            li {
-                                padding: 8px;
-                                font-size: 17px;
-                            }
-                        }
-                    }
+                    padding-bottom: 34px;
                 }
+                li a:hover {
+                    color: #555;
+                    text-decoration: none;
+                    background-color: $lightGrey;
+                }
+            }
 
-                .cardAdd {
-                    display: flex;
-                    flex-flow: column;
-                    align-items: center;
-                    width: 50%;
-                    margin: 0px auto;
-                    h2 {
-                        color: $darkGrey;
-                        font-size: 35px;
-                    }
-                    i {
-                        @include plusStyle ($darkGrey, 75px);
+            form {
+                margin-top: 0px;
+                input {
+                    font-size: 20px;
+                }
+                button {
+                    font-size: 15px;
+                    margin-top: 8px;
+                }
+            }
+
+            .navbar-header {
+                width: 170px;
+                margin-left: 44%;
+                margin-right: 50%;
+                margin-top: -72px;
+                display: inline-block;
+            }
+
+            .navbar-brand > img {
+                height: 150px;
+                width: auto;
+                display: inline-block;
+                margin-left: -26px;
+            }
+
+            .navbar-nav {
+                display: inline-block;
+                float: right;
+                margin: -165px 50px 0px 0px;
+                .myActive {
+                    background-color: $superDarkOrange;
+                }
+                th {
+                    padding: 0px 25px;
+                    margin: 0px 10px;
+                    ul {
+                        font-size: 25px;
+                        li a:hover {
+                            background-color: $lightGrey;
+                        }
+                        a {
+                            color: $darkGrey;
+                            padding: 10px;
+                        }
                     }
                 }
-                .cardAdd:hover {
-                    cursor: pointer;
-                    h2,
-                    i {
-                        color: black;
+                th a {
+                    color: #fff;
+                    text-align: center;
+                    padding-bottom: 34px;
+                }
+                th a:hover {
+                    //                    color: $darkGrey;
+                    text-decoration: none;
+                    background-color: $superDarkOrange;
+                }
+            }
+        }
+
+        #logoBacker {
+            background-color: #fff;
+            height: 170px;
+            width: 170px;
+            border-radius: 170px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        #mainSearch {
+            margin-top: 5px;
+        }
+
+        #bigun {
+            width: auto;
+
+            #myModal {
+                .modal-content {
+                    .modal-header {
+                        background-color: $darkOrange;
+                        .modal-title {
+                            font-family: $headFont;
+                            font-size: 25px;
+                        }
+                    }
+                    .modal-body {
+                        background-color: $bodyTan;
+                        .secLabel {
+                            font-family: $headFont;
+                            font-size: 20px;
+                            display: block;
+                            width: 100%;
+                        }
+                        #picFail {
+                            color: red;
+                            font-style: italic;
+                            display: none;
+                        }
+                        button {
+                            background-color: $lightGrey;
+                            font-size: 17px;
+                        }
+                        button:hover {
+                            background-color: aliceblue;
+                        }
+                    }
+                    .modal-footer {
+                        background-color: $lightTan;
                     }
                 }
             }
 
-            .pizzaCard {
-                @include pizzaCard;
-                h2 {
-                    font-family: $headFont;
-                    margin: 15px 0px 0px 15px;
-                    text-decoration: underline;
-                }
-                .cardFlex {
-                    display: flex;
-                    flex-flow: row wrap;
-                    h4 {
-                        font-family: $headFont;
-                        font-size: 20px;
-                        text-decoration: underline;
-                    }
-                    .pizzaPhoto {
-                        @include pizzaPhoto;
+            #mainContent {
+                z-index: 3;
+                margin-top: 105px;
+                height: auto;
+
+                .profile {
+                    border-right: 2px solid black;
+                    height: auto;
+                    overflow: visible;
+                    position: relative;
+
+                    .userPhoto {
+                        height: 150px;
+                        width: 150px;
+                        border-radius: 100px;
+                        border: 4px solid $lightGrey;
+                        overflow: hidden;
                         img {
-                            height: 235px;
+                            height: 150px;
                             width: auto;
                         }
                     }
-                    .basics {
-                        font-family: $bodyFont;
-                        font-size: 23px;
-                        max-width: 250px;
-                    }
 
-                    .rankings {
-                        margin-left: 15px;
-                        max-width: 300px;
-                        .rankBox {
-                            display: flex;
-                            flex-flow: row wrap;
-                            align-items: center;
-                            justify-content: space-around;
-                            .rankItem {
-                                width: 75px;
-                                display: flex;
-                                flex-flow: column nowrap;
-                                align-items: center;
+                    #pizzaScoreContainer {
+                        float: right;
+                        margin-top: -150px;
+
+                        h3 {
+                            color: $darkGrey;
+                            font-family: $headFont;
+                            margin: 0px 0px;
+                            font-size: 30px;
+                            right: 20px;
+                            top: 15px;
+                        }
+
+                        .pizzaCounter {
+                            width: 150px;
+                            height: 90px;
+                            border-radius: 10px;
+                            background-color: rgba(255, 176, 66, .7);
+                            border: 2px solid $superDarkOrange;
+                            top: 52px;
+                            right: 20px;
+                            padding: 5px;
+
+                            .pizzaNum {
+                                font-size: 50px;
+                                color: #fff;
+                                width: 20%;
+                                margin: 0px auto;
                             }
                         }
-                        .thinCrust {
-                            @include crustBox;
-                        }
-                        .medCrust {
-                            @include crustBox;
-                            height: 40px;
-                        }
-                        .thickCrust {
-                            @include crustBox;
-                            height: 60px;
-                        }
                     }
 
-                    .useCom {
-                        min-width: 100px;
-                        margin: 15px;
-                        .comment {
-                            border: 2px solid $darkOrange;
-                            overflow: scroll;
-                            padding: 10px;
-                            font-family: $bodyFont;
-                            font-size: 18px;
-                            border-radius: 10px;
-                            background-color: $bodyTan;
-                            max-height: 85px;
-                        }
+                    h2 {
+                        font-size: 35px;
+                        font-family: $headFont;
+                        color: $superDarkOrange;
+                        top: 160px;
                     }
-                    .toppings {
-                        margin-left: 15px;
-                        .toppingList {
-                            font-size: 22px;
-                            font-family: $bodyFont;
-                        }
-                    }
-                }
-            }
-        }
-    }
 
-    footer {
-        background-color: #FFCA80;
-        height: auto;
-        margin: 15px 0px 0px 0px;
-        position: relative;
-        z-index: 5;
-        #footR {
-            border-right: 2px solid black;
-            margin: 20px 0px;
-            h4 {
-                font-family: $headFont;
-            }
-            p {
-                font-family: $bodyFont;
-            }
-            input {
-                display: block;
-                margin-bottom: 10px;
-            }
-            #em {
-                width: 200px;
-            }
-            textarea {
-                width: 360px;
-                height: 200px;
-                resize: none;
-                display: none;
-            }
-            #send {
-                border-radius: 10px;
-                background-color: $darkGrey;
-                font-size: 14px;
-                font-family: $headFont;
-                color: #fff;
-                width: 70px;
-                height: 40px;
-                border: 0px;
-            }
-            #send:hover {
-                background-color: $lightGrey;
-                color: #000;
-            }
-            #sent {
-                display: none;
-                font-family: $bodyFont;
-                font-size: 20px;
-            }
-        }
-        #footL {
-            color: $darkGrey;
-            height: 100%;
-            .footLink {
-                font-size: 22px;
-                margin: 30px 20px;
-            }
-            a {
-                text-decoration: none;
-                color: $darkGrey;
-            }
-            a:hover {
-                color: $lightGrey;
-            }
-            #priv:hover {
-                cursor: pointer;
-                color: $lightGrey;
-            }
-        }
-    } //Landing page styles
-    #loginBox {
-        background-color: $darkOrange;
-        border-radius: 20px;
-        margin-top: 15%;
-        margin-bottom: 100px;
-        padding: 0px;
-        height: auto;
-        #loginHead {
-            text-align: center;
-            #logoBackerL {
-                width: 30%;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: -85px;
-                background-color: #fff;
-                height: 170px;
-                width: 170px;
-                border-radius: 170px;
-                border: 1px solid black;
-                display: inline-block;
-                img {
-                    height: 170px;
-                    width: auto;
-                    display: inline-block;
-                    margin-left: -22px;
-                }
-            }
-            h3 {
-                font-family: $headFont;
-                font-style: italic;
-                font-size: 23px;
-                color: $darkGrey;
-            }
-        }
-        #login {
-            @include logreg;
-            border-bottom: 2px solid $lightGrey;
-            #failure {
-                text-align: center;
-                font-family: $bodyFont;
-                color: red;
-                font-size: 17px;
-                font-style: italic;
-                display: none;
-            }
-        }
-        #register {
-            @include logreg;
-            h1 {
-                margin: 0px;
-            }
-            #regBiz {
-                display: none;
-                background-color: #fff;
-                #regForm {
-                    padding: 15px;
-                    #failure2 {
-                        text-align: center;
+                    .bioText {
+                        top: 245px;
                         font-family: $bodyFont;
-                        color: red;
-                        font-size: 17px;
-                        font-style: italic;
-                        display: none;
+                        border-left: 3px solid $darkGrey;
+                        font-size: 22px;
+                        padding: 0px 20px;
                     }
+                    .cardAddBtn {
+                        width: 200px;
+                        height: 100px;
+                        background-color: $lightGrey;
+                        border: 3px solid $darkGrey;
+                        border-radius: 10px;
+                        margin-top: 15px;
+                        .addBtnTxt {
+                            color: $darkGrey;
+                            width: 120px;
+                            float: right;
+                            position: relative;
+                            text-align: center;
+                            padding: 6px;
+                            font-size: 21px;
+                            margin-top: 10px;
+                        }
+                        i {
+                            @include plusStyle($darkGrey, 54px);
+                            margin: 15px 0px 0px 0px;
+                        }
+                    }
+                    .cardAddBtn:hover {
+                        background-color: $darkGrey;
+                        border: 3px solid $lightGrey;
+                        cursor: pointer;
+                        i {
+                            @include plusStyle($lightGrey, 54px);
+                        }
+                        .addBtnTxt {
+                            color: $lightGrey;
+                        }
+                    }
+                }
+
+                .cardCol {
+                    padding: 0px 30px;
+                    margin: 0px;
+
+                    .orderToggle {
+                        margin-top: -17px;
+
+                        .sortActive {
+                            color: $darkGrey;
+                        }
+                        #clear {
+                            display: none;
+                        }
+                        i:hover {
+                            color: $darkGrey;
+                            cursor: pointer;
+                        }
+                    }
+
+                    #date:hover,
+                    #tasty:hover {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+
+                    #welcome {
+                        text-align: center;
+                        border: 2px solid #c0d6f9;
+                        background-color: #f9fafc;
+                        margin-bottom: 15px;
+                        display: none;
+                        h3 {
+                            font-family: $headFont;
+                            font-size: 60px;
+                            padding: 15px;
+                        }
+                        #welcomeList {
+                            width: 80%;
+                            margin: 0px auto;
+                            border-top: 2px solid $lightGrey;
+                            h4 {
+                                font-size: 25px;
+                                padding: 10px;
+                            }
+                            h6 {
+                                font-size: 16px;
+                                border-bottom: 2px solid $lightGrey;
+                                padding: 17px;
+                            }
+                            img {
+                                width: 70px;
+                                padding: 10px;
+                            }
+                            ul {
+                                text-align: left;
+                                li {
+                                    padding: 8px;
+                                    font-size: 17px;
+                                }
+                            }
+                        }
+                    }
+
+                    .cardAdd {
+                        display: flex;
+                        flex-flow: column;
+                        align-items: center;
+                        width: 50%;
+                        margin: 0px auto;
+                        h2 {
+                            color: $darkGrey;
+                            font-size: 35px;
+                        }
+                        i {
+                            @include plusStyle ($darkGrey, 75px);
+                        }
+                    }
+                    .cardAdd:hover {
+                        cursor: pointer;
+                        h2,
+                        i {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            background-color: #FFCA80;
+            height: auto;
+            margin: 15px 0px 0px 0px;
+            position: relative;
+            z-index: 5;
+            #footR {
+                border-right: 2px solid black;
+                margin: 20px 0px;
+                h4 {
+                    font-family: $headFont;
+                }
+                p {
+                    font-family: $bodyFont;
+                }
+                input {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                #em {
+                    width: 200px;
+                }
+                textarea {
+                    width: 360px;
+                    height: 200px;
+                    resize: none;
+                    display: none;
+                }
+                #send {
+                    border-radius: 10px;
+                    background-color: $darkGrey;
+                    font-size: 14px;
+                    font-family: $headFont;
+                    color: #fff;
+                    width: 70px;
+                    height: 40px;
+                    border: 0px;
+                }
+                #send:hover {
+                    background-color: $lightGrey;
+                    color: #000;
+                }
+                #sent {
+                    display: none;
+                    font-family: $bodyFont;
+                    font-size: 20px;
+                }
+            }
+            #footL {
+                color: $darkGrey;
+                height: 100%;
+                .footLink {
+                    font-size: 22px;
+                    margin: 30px 20px;
+                }
+                a {
+                    text-decoration: none;
+                    color: $darkGrey;
+                }
+                a:hover {
+                    color: $lightGrey;
+                }
+                #priv:hover {
+                    cursor: pointer;
+                    color: $lightGrey;
+                }
+            }
+        } //Landing page styles
+        #loginBox {
+            background-color: $darkOrange;
+            border-radius: 20px;
+            margin-top: 15%;
+            margin-bottom: 100px;
+            padding: 0px;
+            height: auto;
+            #loginHead {
+                text-align: center;
+                #logoBackerL {
+                    width: 30%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: -85px;
+                    background-color: #fff;
+                    height: 170px;
+                    width: 170px;
+                    border-radius: 170px;
+                    border: 1px solid black;
+                    display: inline-block;
+                    img {
+                        height: 170px;
+                        width: auto;
+                        display: inline-block;
+                        margin-left: -22px;
+                    }
+                }
+                h3 {
+                    font-family: $headFont;
+                    font-style: italic;
+                    font-size: 23px;
+                    color: $darkGrey;
+                }
+            }
+            #login {
+                @include logreg;
+                border-bottom: 2px solid $lightGrey;
+                #failure {
+                    text-align: center;
+                    font-family: $bodyFont;
+                    color: red;
+                    font-size: 17px;
+                    font-style: italic;
+                    display: none;
+                }
+            }
+            #register {
+                @include logreg;
+                h1 {
+                    margin: 0px;
+                }
+                #regBiz {
+                    display: none;
+                    background-color: #fff;
+                    #regForm {
+                        padding: 15px;
+                        #failure2 {
+                            text-align: center;
+                            font-family: $bodyFont;
+                            color: red;
+                            font-size: 17px;
+                            font-style: italic;
+                            display: none;
+                        }
+                        label {
+                            font-family: $headFont;
+                            font-size: 30px;
+                            color: $darkGrey;
+                        }
+                        button {
+                            font-size: 20px;
+                            color: $darkGrey;
+                            font-family: $headFont;
+                        }
+                    }
+                }
+            }
+            #loginBiz {
+                display: none;
+                background-color: #fff;
+                #logForm {
+                    padding: 15px;
                     label {
                         font-family: $headFont;
                         font-size: 30px;
@@ -643,121 +645,390 @@
                     }
                 }
             }
-        }
-        #loginBiz {
-            display: none;
-            background-color: #fff;
-            #logForm {
-                padding: 15px;
-                label {
-                    font-family: $headFont;
-                    font-size: 30px;
+            #landingFoot {
+                height: auto;
+                padding: 15px 35px;
+                font-family: $bodyFont;
+                font-size: 15px;
+                h4 {
                     color: $darkGrey;
+                    font-family: $headFont
                 }
-                button {
+                h4:hover {
+                    color: $lightGrey;
+                    cursor: pointer;
+                }
+                #footCopy {
+                    display: none;
+                }
+            }
+        } //Contact page styles
+        #resumeBox {
+            border: 3px solid $superDarkOrange;
+            border-radius: 20px;
+            height: auto;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            background-color: $lightTan;
+            #myPic {
+                height: 170px;
+                width: 170px;
+                margin: 20px auto;
+                border: 2px solid $darkGrey;
+                border-radius: 170px;
+                background-image: url(Assets/shane.uncleho.jpg);
+                background-position: center;
+                background-size: contain;
+                display: block;
+            }
+            h1 {
+                font-family: $headFont;
+                font-size: 50px;
+                color: #444;
+                display: block;
+                text-align: center;
+            }
+            #bodStyle {
+                background-color: $bodyTan;
+                border: 2px solid $darkOrange;
+                margin: 10px 0px;
+                #bodyContent {
+                    font-size: 25px;
+                    font-family: $bodyFont;
+                    margin: 10px 40px;
+                }
+                #contacts {
+                    list-style: none;
+                    margin: 15px auto;
+                    width: 50%;
+                    padding: 5px;
+                    border-top: 2px solid $darkOrange;
+                    li {
+                        font-size: 27px;
+                        display: inline-block;
+                    }
+                    #em {
+                        display: none;
+                        font-size: 22px;
+                    }
+                    .icon {
+                        margin: 10px;
+                        i {
+                            color: #444;
+                            font-size: 55px;
+                        }
+                        i:hover {
+                            color: $darkGrey;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        #myModal1 {
+            .modal-content {
+                .modal-header {
+                    background-color: $darkOrange;
+                    .modal-title {
+                        font-family: $headFont;
+                        font-size: 30px;
+                    }
+                }
+                .modal-body {
+                    background-color: $bodyTan;
+                    font-family: $bodyFont;
+                    font-size: 25px;
+                }
+                .modal-footer {
+                    background-color: $lightTan;
+                }
+            }
+        }
+
+        .pizzaCard {
+            @include pizzaCard;
+            h2 {
+                font-family: $headFont;
+                margin: 15px 0px 0px 15px;
+                text-decoration: underline;
+            }
+            .cardFlex {
+                display: flex;
+                flex-flow: row wrap;
+                h4 {
+                    font-family: $headFont;
+                    font-size: 20px;
+                    text-decoration: underline;
+                }
+                .pizzaPhoto {
+                    @include pizzaPhoto;
+                    img {
+                        height: 235px;
+                        width: auto;
+                    }
+                }
+                .basics {
+                    font-family: $bodyFont;
+                    font-size: 23px;
+                    max-width: 250px;
+                }
+
+                .rankings {
+                    margin-left: 15px;
+                    max-width: 300px;
+                    .rankBox {
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-items: center;
+                        justify-content: space-around;
+                        .rankItem {
+                            width: 75px;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            align-items: center;
+                        }
+                    }
+                    .thinCrust {
+                        @include crustBox;
+                    }
+                    .medCrust {
+                        @include crustBox;
+                        height: 40px;
+                    }
+                    .thickCrust {
+                        @include crustBox;
+                        height: 60px;
+                    }
+                }
+
+                .useCom {
+                    min-width: 200px;
+                    margin: 15px;
+                    .comment {
+                        border: 2px solid $darkOrange;
+                        padding: 10px;
+                        font-family: $bodyFont;
+                        font-size: 18px;
+                        border-radius: 10px;
+                        background-color: $bodyTan;
+                    }
+                }
+                .toppings {
+                    margin-left: 15px;
+                    .toppingList {
+                        font-size: 22px;
+                        font-family: $bodyFont;
+                    }
+                }
+            }
+        } //Results page
+        #searchBig {
+            width: 75%;
+            margin: 85px auto 35px auto;
+            input {
+                display: inline-block;
+                font-size: 30px;
+                height: 45px;
+                border-radius: 20px;
+            }
+            button {
+                display: inline-block;
+                margin: 0px 7px;
+                font-size: 17px;
+                padding: 10px;
+                border-radius: 20px;
+                vertical-align: middle;
+            }
+        }
+
+//Styles for autocomplete menu
+        ul.ui-autocomplete.ui-menu {
+            background-color: white;
+            list-style: none;
+            width: 47%;
+            li {
+                font-size: 27px;
+                font-family: $bodyFont;
+            }
+            .ui-state-active,
+            .ui-widget-content .ui-state-active,
+            .ui-widget-header .ui-state-active,
+            a.ui-button:active,
+            .ui-button:active,
+            .ui-button.ui-state-active:hover {
+                background-color: $lightGrey;
+            }
+        }
+
+
+
+
+        #searchFail {
+            font-family: $headFont;
+            text-align: center;
+            font-size: 40px;
+            color: $darkGrey;
+            width: 80%;
+            margin: 45px auto;
+            display: none;
+            img {
+                width: 60px;
+                margin: 10px auto;
+            }
+            a {
+                color: $darkGrey;
+                font-size: 30px
+            }
+            a:hover {
+                color: #111;
+                text-decoration: none;
+            }
+        }
+
+        .profileCol {
+            border-right: 2px solid black;
+            margin-bottom: -230px;
+            h2 {
+                font-size: 40px;
+                font-family: $headFont;
+                color: $superDarkOrange;
+            }
+            .userPic {
+                height: 150px;
+                width: 150px;
+                border-radius: 100px;
+                border: 4px solid $lightGrey;
+                overflow: hidden;
+                img {
+                    height: 150px;
+                    width: auto;
+                }
+            }
+        } //Profile edit page styles
+        #useEdit {
+            margin-top: 70px;
+            h1 {
+                color: $darkGrey;
+            }
+            #editBox {
+                border-top: 2px solid $darkGrey;
+                padding: 15px;
+                h2 {
+                    color: $darkGrey;
+                    border-bottom: 2px solid $darkGrey;
+                    padding: 10px 0px;
+                    font-size: 36px;
+                }
+                h3 {
+                padding: 8px 0px;
+                font-size: 30px;
+                }
+                h3:hover {
+                cursor: pointer;
+                color: $darkGrey;
+                }
+                #editError {
+                    color: red;
+                    font-style: italic;
+                    font-size: 22px;
+                    font-family: $bodyFont;
+                    margin: 10px;
+                    display: none;
+                }
+                #formBigFlex {
+                    display: inline-flex;
+                }
+                #picBox {
+                    display: inline-block;
+                    position: relative;
+                    label {
+                        margin-bottom: 0px;
+                        .overlay {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(10, 8, 8, .7);
+                            width: 100%;
+                            overflow: hidden;
+                            height: 50px;
+                            transition: .5s ease;
+                            .text {
+                                color: #fff;
+                                font-size: 20px;
+                                position: absolute;
+                                overflow: hidden;
+                                display: inline-block;
+                                left: 25%;
+                                width: auto;
+                                font-family: $headFont;
+                            }
+                        }
+                    }
+                }
+                #picBox:hover .overlay {
+                    height: 100%;
+                    cursor: pointer;
+                }
+                #picBox img {
+                    height: 300px;
+                    max-width: 450px;
+                    border: 1px solid $darkGrey;
+                }
+                #picBox > label > input {
+                    display: none;
+                }
+                #editFlex {
+                    display: inline-flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-left: 45px;
+                }
+                #bioLabel {
+                    font-family: $headFont;
+                    text-decoration: underline;
+                    color: $darkGrey;
+                    font-size: 25px;
+                }
+                #bioEdit {
+                    width: 100%;
+                    height: 205px;
                     font-size: 20px;
                     color: $darkGrey;
+                    background-color: $bodyTan;
+                    border: 1px solid $superDarkOrange;
+                    border-radius: 5px;
+                    margin-top: 15px;
+                    resize: none;
+                    padding: 8px;
+                }
+                #bioEdit:focus {
+                    outline: none;
+                    background-color: #fff;
+                }
+                #un {
                     font-family: $headFont;
+                    font-size: 45px;
+                    border-bottom: 2px solid $superDarkOrange;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                    background-color: $bodyTan;
+                    color: $darkOrange;
+                    border-radius: 5px;
                 }
-            }
-        }
-        #landingFoot {
-            height: auto;
-            padding: 15px 35px;
-            font-family: $bodyFont;
-            font-size: 15px;
-            h4 {
-                color: $darkGrey;
-                font-family: $headFont
-            }
-            h4:hover {
-                color: $lightGrey;
-                cursor: pointer;
-            }
-            #footCopy {
-                display: none;
-            }
-        }
-    } //Contact page styles
-    #resumeBox {
-        border: 3px solid $superDarkOrange;
-        border-radius: 20px;
-        height: auto;
-        margin-top: 100px;
-        margin-bottom: 50px;
-        background-color: $lightTan;
-        #myPic {
-            height: 170px;
-            width: 170px;
-            margin: 20px auto;
-            border: 2px solid $darkGrey;
-            border-radius: 170px;
-            background-image: url(Assets/shane.uncleho.jpg);
-            background-position: center;
-            background-size: contain;
-            display: block;
-        }
-        h1 {
-            font-family: $headFont;
-            font-size: 50px;
-            color: #444;
-            display: block;
-            text-align: center;
-        }
-        #bodStyle {
-            background-color: $bodyTan;
-            border: 2px solid $darkOrange;
-            margin: 10px 0px;
-            #bodyContent {
-                font-size: 25px;
-                font-family: $bodyFont;
-                margin: 10px 40px;
-            }
-            #contacts {
-                list-style: none;
-                margin: 15px auto;
-                width: 50%;
-                padding: 5px;
-                border-top: 2px solid $darkOrange;
-                li {
-                    font-size: 27px;
-                    display: inline-block;
+                #un:focus {
+                    outline: none;
+                    background-color: #fff;
                 }
-                #em {
-                    display: none;
-                    font-size: 22px;
-                }
-                .icon {
-                    margin: 10px;
-                    i {
-                        color: #444;
-                        font-size: 55px;
-                    }
-                    i:hover {
-                        color: $darkGrey;
-                        cursor: pointer;
+                #btnHolder {
+                    width: 300px;
+                    margin: 10px auto;
+                    button {
+                        font-size: 20px;
+                        font-family: $bodyFont;
                     }
                 }
             }
         }
-    }
-
-    #myModal1 {
-        .modal-content {
-            .modal-header {
-                background-color: $darkOrange;
-                .modal-title {
-                    font-family: $headFont;
-                    font-size: 30px;
-                }
-            }
-            .modal-body {
-                background-color: $bodyTan;
-                font-family: $bodyFont;
-                font-size: 25px;
-            }
-            .modal-footer {
-                background-color: $lightTan;
-            }
-        }
-    }
