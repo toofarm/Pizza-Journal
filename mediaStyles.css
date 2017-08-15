@@ -1,19 +1,19 @@
 @media (max-width: 1370px) {
   #bigun #mainContent .profile .userPhoto {
     height: 135px;
-    width: 135px; }
+    width: 135px;
+    display: block; }
+  #bigun #mainContent .profile #pizzaScoreContainer {
+    position: relative;
+    display: block;
+    margin: 15px 0px;
+    float: none; } }
+@media (max-width: 1200px) {
   #bigun #mainContent .profile #pizzaScoreContainer {
     position: absolute;
     top: 205px;
-    right: 5%; } }
-@media (max-width: 1280px) {
-  #bigun #mainContent .profile .userPhoto {
-    height: 140px;
-    width: 140px; }
-  #bigun #mainContent .profile #pizzaScoreContainer {
-    position: absolute;
-    top: 205px;
-    right: 5%; } }
+    right: 5%;
+    margin: -150px 0px 0px 0px; } }
 @media (max-width: 1024px) {
   #navLarge form {
     margin-left: -50px; }
@@ -61,7 +61,7 @@
     height: 220px;
     width: 290px; }
 
-  #profileCol {
+  .profileCol {
     margin: 10px auto;
     padding-bottom: 10px;
     border-right: none;
@@ -122,8 +122,6 @@
         padding: 0px;
         position: relative;
         font-size: 20px; }
-        #navLarge #navMobile #mob-nav-dropdown li {
-          border-right: 1px solid white; }
 
   #bigun #mainContent .profile .userPhoto {
     position: absolute;
@@ -168,7 +166,7 @@
       bottom: 20px; }
     #navLarge .navbar-header {
       bottom: -70px;
-      margin-left: 36%;
+      margin-left: 33%;
       position: absolute; }
     #navLarge #navMobile {
       width: 100%;
@@ -208,13 +206,20 @@
     position: static; }
   #bigun #mainContent .profile #pizzaScoreContainer {
     position: static;
-    margin-top: -135px; }
+    margin-top: -135px;
+    float: right; }
 
   #loginBox {
     margin-top: 150px; }
 
   #useEdit #editBox #picBox label .overlay .text {
-    left: 15%; } }
+    left: 15%; }
+
+  #useEdit #editBox #bioEdit {
+    height: 285px; }
+
+  #searchBig input {
+    font-size: 23px; } }
 @media (max-width: 360px) {
   #navLarge .navbar-nav {
     font-size: 25px;

@@ -49,17 +49,6 @@
     <script src="modalAni.js"></script>
     <script src="cardAdd.js"></script>
     <script src="activeAni.js"></script>
-    <!-- For calendar display in Firefox -->
-    <script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
-    <script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
-    <script>
-        webshims.setOptions('waitReady', false);
-        webshims.setOptions('forms-ext', {
-            types: 'date'
-        });
-        webshims.polyfill('forms forms-ext');
-
-    </script>
 </body>
 
 </html>

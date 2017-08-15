@@ -39,22 +39,27 @@
                         <form id="pcForm" enctype="multipart/form-data" method="post">
                             <div class="form-group">
                                 <label for="pizzaName" class="secLabel">Pizza name:</label>
+                                <h5>The type of pizza you ate</h5>
                                 <input type="text" name="pizzaName" class="form-control" method="post" required>
                             </div>
                             <div class="form-group">
                                 <label class="secLabel">Restaurant:</label>
+                                <h5>The restaurant where you ate it</h5>
                                 <input type="text" name="restaurant" class="form-control" method="post">
                             </div>
                             <div class="form-group">
                                 <label class="secLabel">Date:</label>
+                                <h5>The date when it happened</h5>
                                 <input type="date" name="date" class="form-control" method="post" required>
                             </div>
                             <div class="form-group">
                                 <label class="secLabel">Pizza photo</label>
+                                <h5>A photo of your delicious pizza - smaller than 2MB, please</h5>
                                 <div id="picFail">Pizza pics must be smaller than 2.5MB</div>
                                 <input type="file" name="pic" class="form-control" accept="image/*" method="post" id="pic" required>
                             </div>
                             <label class="secLabel">Pizza score:</label>
+                            <h5>Score your pizza from 1 to 10, 1 being disgusting and 10 being heaven itself</h5>
                             <select name="pizzaScore" required><option value="1/10">1</option>
                             <option value="2/10">2</option>
   <option value="3/10">3</option>
@@ -69,6 +74,7 @@
                             <div class="form-group">
                                 <div class="checkbox">
                                     <label class="secLabel">Cheese</label>
+                                    <h5>How was the cheese?</h5>
                                     <label class="checkbox-inline"><input type="checkbox" value="greasy" name="cheese[]" >Greasy</label>
                                     <label class="checkbox-inline"><input type="checkbox" value="stringy" name="cheese[]">Stringy</label>
                                     <label class="checkbox-inline"><input type="checkbox" value="salty" name="cheese[]">Salty</label>
@@ -78,6 +84,7 @@
                             <div class="form-group">
                                 <div class="checkbox">
                                     <label class="secLabel">Sauce</label>
+                                    <h5>How was the sauce?</h5>
                                     <label class="checkbox-inline"><input type="checkbox" value="thick" name="sauce[]" >Thick</label>
                                     <label class="checkbox-inline"><input type="checkbox" value="thin" name="sauce[]" >Thin</label>
                                     <label class="checkbox-inline"><input type="checkbox" value="salty" name="sauce[]"  >Salty</label>
@@ -86,6 +93,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="secLabel">Crust</label>
+                                <h5>How was the crust?</h5>
                                 <div class="radio">
                                     <label class="radio-inline"><input type="radio" value="thin" name="crust">Thin</label>
                                     <label class="radio-inline"><input type="radio" value="medium" name="crust" >Medium</label>
@@ -95,6 +103,7 @@
                             <div class="form-group">
                                 <div class="checkbox">
                                     <label class="secLabel">Toppings</label>
+                                    <h5>Which toppings did it have?</h5>
                                     <label class="checkbox-inline"><input type="checkbox" value="Anchovies" name="toppings[]">Anchovies</label>
                                     <label class="checkbox-inline"><input type="checkbox" value="Artichoke" name="toppings[]">Artichoke</label>
                                     <label class="checkbox-inline"><input type="checkbox" value="Banana Peppers" name="toppings[]">Banana peppers</label>
@@ -106,6 +115,7 @@
                                     <label class="checkbox-inline"><input type="checkbox" value="Ham"  name="toppings[]">Ham</label>
                                     <label class="checkbox-inline"><input type="checkbox" value="Mushrooms" name="toppings[]">Mushrooms</label>
                                     <label class="checkbox-inline"><input type="checkbox" value="Olives" name="toppings[]">Olives</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="Onions" name="toppings[]">Onions</label>
                                     <label class="checkbox-inline"><input type="checkbox" value="Pepperoni" name="toppings[]">Pepperoni</label>
                                     <label class="checkbox-inline"><input type="checkbox" value="Pineapple"  name="toppings[]">Pineapple</label>
                                     <label class="checkbox-inline"><input type="checkbox" value="Pine Nuts" name="toppings[]">Pine nuts</label>
@@ -117,7 +127,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="secLabel">Comments:</label><textarea name="comment" class="form-control" method="post">How was your pizza? Don't hold back...</textarea>
+                                <label class="secLabel">Comments:</label><textarea name="comment" class="form-control" method="post" onfocus="this.select()">How was your pizza? Don't hold back...</textarea>
                             </div>
                             <div class="form-group">
                                 <button id="pcFormSubmit" class="btn btn-default" type="submit" name="submit">Make Pizza Card</button>
@@ -156,7 +166,7 @@
                 </div>
                 <button type="button" class="cardAddBtn" data-toggle="modal" data-target="#myModal">
                     <div class="addBtnTxt">
-                        Create new pizza card
+                        Add more pizza
                     </div>
                     <i class="fa fa-plus" aria-hidden="true"></i>
                 </button>
@@ -179,7 +189,7 @@
                             <li>Upload pictures of your pizza</li>
                             <li>Check out pizza that your friends are eating</li>
                         </ul>
-                        <h6>Click "Add more pizza" or "Create new pizza card" to start adding pizza</h6>
+                        <h6>Click "Add more pizza" to start your pizza journey</h6>
                         <img src="Assets/pizzamoji.png" alt="Pizza">
                     </div>
                 </div>
@@ -189,7 +199,7 @@
 
                 <div class="cardAdd">
                     <i class="fa fa-plus" aria-hidden="true"></i>
-                    <h2>Add more pizza!</h2>
+                    <h2>Add more pizza</h2>
                 </div>
 
             </div>

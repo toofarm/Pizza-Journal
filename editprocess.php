@@ -33,7 +33,7 @@ if ( isset($_POST["submit"]) ) {
         
     if($_FILES) { 
         
-        
+//If no picture uploaded, rename current picture to fit new file path
         if ($_FILES["picInput"]["name"] == null) {
         
             $imgArray = explode("/", $img);
@@ -89,10 +89,10 @@ if ( isset($_POST["submit"]) ) {
     rmdir("Users/$u");
     }
         
-//    Changes user data in database
-    $c = mysqli_connect('localhost', "root", "root", "pcUseBase");
+//   Change user data in database
+    $c = mysqli_connect("localhost", "fssa", "Webdevfun1!", "fssa");
     
-    $q = "select * from pcU where usename='$u'";
+    $q = "select * from pizzajournalUsers where usename='$u'";
     
     $l = mysqli_query($c, $q);
     
@@ -103,7 +103,7 @@ if ( isset($_POST["submit"]) ) {
         
         $id = $a["ID"];
         
-        $sql = "UPDATE pcU SET usename='$un', image='$img' WHERE ID='$id'";
+        $sql = "UPDATE pizzajournalUsers SET usename='$un', image='$img' WHERE ID='$id'";
         
         mysqli_query($c, $sql);
         

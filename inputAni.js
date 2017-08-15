@@ -18,7 +18,7 @@ $('.navbar-form > .form-group > input').focus(function () {
 
     $('.navbar-form > .form-group > input').blur(function () {
             if ($(this).val() == '') {
-                $(this).val('Search pizza');
+                $(this).val('Search all pizza');
             }
 
             $(this).animate({

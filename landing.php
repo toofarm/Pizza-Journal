@@ -19,6 +19,18 @@
             #loginBox #register #regBiz {
                 display: <?php echo($_SESSION['regerror']); ?>;
             }
+            #loginBox #register #regBiz #unTaken {
+                display: <?php echo($_SESSION['unTaken']); ?>;
+            }
+            #loginBox #register #regBiz #emTaken {
+                display: <?php echo($_SESSION['emTaken']); ?>;
+            }
+            #loginBox #register #regBiz {
+                display: <?php echo($_SESSION['unTaken']); ?>;
+            }
+            #loginBox #register #regBiz {
+                display: <?php echo($_SESSION['emTaken']); ?>;
+            }
         </style>
     </head>
 <body>
@@ -33,27 +45,15 @@
                     </div>
                     <h3>Keeping track of the only memories that matter</h3>
                 </div>
-                <div id="login">
-                    <h1>Login</h1>
-                    <div id="loginBiz">
-                        <form id="logForm" action="loginprocess.php" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                               <div id="failure">
-                                The username and password you entered don't appear to be in our records.
-                                </div> <label>Username</label>
-                                <input class="form-control" type="text" name="un" id="un" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input class="form-control" type="password" name="pw" id="pw" required>
-                            </div>
-                            <button type="submit" name="submit" value="submit" class="btn btn-default">Sign in</button>
-                        </form>
-                    </div>
-                </div>
                 <div id="register">
-                    <h1>Register</h1>
+                    <h1>I'm new here</h1>
                     <div id="regBiz">
+                        <div id="unTaken">
+                        A user with that name already exists in our records. Try picking another name, or logging in
+                        </div>
+                        <div id="emTaken">
+                        A user with that email address already exists in our records. Try registering with another address, or logging in
+                        </div>
                         <form id="regForm" method="post" action="registerprocess.php" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label>Email</label>
@@ -69,16 +69,34 @@
                             </div>
                             <div class="form-group">
                                 <label>Tell us a little bit about yourself</label>
-                                <textarea class="form-control" name="bio" id="bio" maxlength="250" required>This short bio will display on your profile page. 250 characters or less, please!</textarea>
+                                <textarea class="form-control" name="bio" id="bio" maxlength="250" required onfocus="this.select()">This short bio will display on your profile page. 250 characters or less, please!</textarea>
                             </div>
                             <div class="form-group">
-                                <div id="failure2">Please upload a JPG, PNG, or GIF that is less than 2MB.</div>
+                                <div id="failure2">Please upload a JPG, PNG, or GIF that is smaller than 2MB.</div>
                                 <label>Upload a photo</label>
                                 <input class="form-control" type="file" name="upic" id="upic" accept="image/*" required>
                             </div>
                             <button type="submit" class="btn btn-default">Sign me up for Pizza Journal</button>
                         </form>
 
+                    </div>
+                </div>
+                <div id="login">
+                    <h1>I've been here before</h1>
+                    <div id="loginBiz">
+                        <form id="logForm" action="loginprocess.php" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                               <div id="failure">
+                                The username and password you entered don't appear to be in our records.
+                                </div> <label>Email or Username</label>
+                                <input class="form-control" type="text" name="un" id="un" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input class="form-control" type="password" name="pw" id="pw" required>
+                            </div>
+                            <button type="submit" name="submit" value="submit" class="btn btn-default">Sign in</button>
+                        </form>
                     </div>
                 </div>
                 <div id="landingFoot">

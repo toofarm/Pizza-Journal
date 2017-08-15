@@ -1,9 +1,38 @@
 <?php session_start();
 
+    $_SESSION["unTaken"] = "none";
+    $_SESSION["emTaken"] = "none";
+    
     $_SESSION["em"] = $e = $_POST["newem"];
     $_SESSION["user"] = $u = $_POST["newun"];
     $p = $_POST["newpw"];
     $b = $_POST["bio"];
+
+    $c = mysqli_connect("localhost", "fssa", "Webdevfun1!", "fssa");
+
+    $unquery = mysqli_query($c, "SELECT * FROM pizzajournalUsers WHERE usename='$u'");
+
+  if (mysqli_num_rows($unquery) != 0)
+  {
+      $_SESSION["unTaken"] = "block";
+      
+      header('location: landing.php');
+      
+      exit();
+      
+  }
+
+    $emquery = mysqli_query($c, "SELECT * FROM pizzajournalUsers WHERE em='$e'");
+
+    if (mysqli_num_rows($emquery) != 0)
+  {
+      $_SESSION["emTaken"] = "block";
+      
+      header('location: landing.php');
+        
+      exit();
+        
+  }
 
 //    Create email
     $m = "
@@ -95,9 +124,8 @@
 
 //    Put login info in database
 //Put the name of the image into the database
-$c = mysqli_connect("localhost", "fssa", "Webdevfun1", "pizzajournalUsers");
 
-$q = "INSERT into pcU(usename, pw, em, image) VALUES('$u', '$p', '$e', '$i');";
+$q = "INSERT into pizzajournalUsers(usename, pw, em, image) VALUES('$u', '$p', '$e', '$i');";
 
 mysqli_query($c, $q);
 

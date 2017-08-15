@@ -53,16 +53,32 @@
                                 <textarea name="bio" id="bioEdit" onclick="this.select()" maxlength="250"><?php echo $b ?></textarea>
                             </div>
                         </div>
-                        <div id="pwResetHolder">
-                            <h2>Edit private info</h2>
-                            <h3>Reset password</h3>
-                            <h3>Change email</h3>
-                        </div>
                         <div id="btnHolder">
                             <a href="profile.php" target=""><button type="button" class="btn btn-default">Back to profile</button></a>
                             <button type="submit" name="submit" class="btn btn-default">Submit changes</button>
                         </div>
                     </form>
+                    <div id="pwResetHolder">
+                            <h2>Edit private info</h2>
+                            <h3 id="pwShow">Reset password</h3>
+                            <form method="post" action="pwreset.php" enctype="multipart/form-data" id="pwreset">
+                                <label for="emrecovpw">
+                                Enter your email address to change your current password, then check your email for password reset instructions:
+                                </label><br>
+                                <input type="text" name="emrecovpw">
+                                <button type="submit" name="emrecovSubmit" class="btn btn-default">Submit
+                                </button>
+                            </form>
+                            <h3 id="emShow">Change email</h3>
+                            <form method="post" action="emreset.php" enctype="multipart/form-data" id="emreset">
+                                <label for="emrecovem">
+                                Enter your current email address:
+                                </label><br>
+                                <input type="text" name="emrecovem">
+                                <button type="submit"  class="btn btn-default">Submit
+                                </button>
+                            </form>
+                        </div>
                 </div>
             </div>
         </div>

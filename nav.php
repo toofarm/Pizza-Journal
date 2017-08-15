@@ -6,7 +6,7 @@
         </div>
         <form class="navbar-form navbar-left" role="search" action="search.php" method="post">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search pizza" name="query">
+                <input type="text" class="form-control" placeholder="Search all pizza" name="query" onclick="this.select()">
             </div>
             <button id="mainSearch" type="submit" class="btn btn-default" name="search">Search</button>
         </form>
@@ -36,7 +36,7 @@
         <div class="container">
             <form class="navbar-form navbar-left" role="search" action="search.php" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search pizza" name="query">
+                    <input type="text" class="form-control" placeholder="Search all pizza" name="query" onclick="this.select()">
                 </div>
                 <button id="mainSearch" type="submit" class="btn btn-default" name="search">Search</button>
             </form>

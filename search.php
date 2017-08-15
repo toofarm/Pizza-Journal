@@ -10,27 +10,68 @@ $j = json_decode($jr, true);
 $hits = array();
 
 foreach ($j as $item) {
+    
+    $nlower = strtolower($item["pizzaname"]);
+    $rlower = strtolower($item["restaurant"]);
+    $uselower = strtolower($item["user"]);
 
-    if ($q == $item["pizzaname"] || $q == $item["restaurant"] || $q == $item["crust"] || $q == $item["score"] || $q == $item["user"]) {
+    $nameA = explode(" ", $nlower);
+    $resA = explode(" ", $rlower);
+    
+    if ($q == $item["pizzaname"] || 
+        $q == $nlower || 
+        $q == $nameA[0] ||
+        $q == $nameA[1] ||
+        $q == $nameA[2] ||
+        $q == $item["restaurant"] || 
+        $q == $rlower || 
+        $q == $resA[0] || 
+        $q == $resA[1] || 
+        $q == $resA[2] || 
+        $q == $item["crust"] || 
+        $q == $item["score"] || 
+        $q == $item["user"] ||
+        $q == $uselower) {
+        
+        if (in_array($item, $hits) == false) {
+        
         array_push($hits, $item);
+            
+        }
+    
     }
     
     foreach ($item["toppings"] as $top) {
         $topL = strtolower($top);
     if ($q == $top || $q == $topL) {
+        
+        if (in_array($item, $hits) == false) {
+        
         array_push($hits, $item);
+            
+        }
     }
     }
     
     foreach ($item["cheese"] as $ch) {
     if ($q == $ch) {
+        
+        if (in_array($item, $hits) == false) {
+        
         array_push($hits, $item);
+            
+        }
     }
     }
     
     foreach ($item["sauce"] as $sc) {
     if ($q == $sc) {
+        
+        if (in_array($item, $hits) == false) {
+        
         array_push($hits, $item);
+            
+        }
     }
     }
 }
@@ -48,12 +89,12 @@ foreach ($hits as $item) {
 }
 
 //Database connection
-$c = mysqli_connect("localhost", "fssa", "Webdevfun1", "pizzajournalUsers");
+$c = mysqli_connect("localhost", "fssa", "Webdevfun1!", "fssa");
         
 $useLoad = array();
 
 foreach($users as $name) {
-    $r = "select * from pcU where usename = '$name'";
+    $r = "select * from pizzajournalUsers where usename = '$name'";
     
 
     $l = mysqli_query($c, $r);
@@ -99,7 +140,7 @@ $pcards = file_get_contents('pcards.json');
         <div id="resultsContent" class="row">
             <form id="searchBig" role="search" action="search.php" method="post">
                 <div class="input-group ui-widget">
-                    <input type="text" class="form-control autoComplete" placeholder="Search pizza" name="query">
+                    <input type="text" class="form-control autoComplete query" placeholder="Search again" name="query">
                     <span class="input-group-btn">
                     <button type="submit" class="btn btn-default" name="search">Search</button></span>
                 </div>
@@ -124,56 +165,30 @@ $pcards = file_get_contents('pcards.json');
     <script src="mailerAni.js"></script>
     <script src="modalAni.js"></script>
     <script src="cardSort.js"></script>
-    <!-- For calendar display in Firefox -->
-    <script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
-    <script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
-    <script>
-        webshims.setOptions('waitReady', false);
-        webshims.setOptions('forms-ext', {
-            types: 'date'
-        });
-        webshims.polyfill('forms forms-ext');
-
-    </script>
 <!--    Autofill search-->
-    <script>
-//     $( function() {
-//    var availableTags = [
-//      "ActionScript",
-//      "AppleScript",
-//      "Asp",
-//      "BASIC",
-//      "C",
-//      "C++",
-//      "Clojure",
-//      "COBOL",
-//      "ColdFusion",
-//      "Erlang",
-//      "Fortran",
-//      "Groovy",
-//      "Haskell",
-//      "Java",
-//      "JavaScript",
-//      "Lisp",
-//      "Perl",
-//      "PHP",
-//      "Python",
-//      "Ruby",
-//      "Scala",
-//      "Scheme"
-//    ];
-         
-//    var availableTags = [
-//       <?php echo $pcards ?>
-//        ];
-//    
-//         console.log(availableTags);
-//    $( ".autoComplete" ).autocomplete({
-//      source: availableTags
+  <script>
+
+//    $( ".query" ).autocomplete({
+//    source: function( request, response ) {
+//    $.ajax({
+//        url: "pcards.json",
+//        data: {term: request.term},
+//        dataType: "json",
+//        success: function( data ) {
+//            response( $.map( data.myData, function( item ) {
+//                return {
+//                    label: item.title,
+//                    value: item.turninId
+//                }
+//            }));
+//        }
 //    });
-//  } );
-//    
-    </script>
+//}
+//    minLength: 2,
+//    delay: 100
+//    });
+      
+  </script>
 <!--    Append search results-->
     <script>
         var users = <?php echo $usehits ?>;
