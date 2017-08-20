@@ -15,16 +15,20 @@
         Reset password | Pizza Journal</title>
     <?php require_once "head.php" ?>
     <style>
-        #useEditR #editBoxReset #keyInvalid {
-            display: <?php echo($_SESSION["keyInvalid"]); ?>;
+        #useEditR #editBoxReset #emkeyInvalid {
+            display: <?php echo($_SESSION["emkeyInvalid"]); ?>;
         }
         
-        #useEditR #editBoxReset #pwNoMatch {
+        #useEditR #editBoxReset #emNoMatch {
             display: <?php echo($_SESSION["pwNoMatch"]); ?>;
         }
         
          #useEditR #editBoxReset #noProfile {
-            display: <?php echo($_SESSION["noProfile"]); ?>;
+            display: <?php echo($_SESSION["emnoProfile"]); ?>;
+        }
+        
+        #useEditR #editBoxReset #emTaken {
+            display: <?php echo($_SESSION["emTaken"]); ?>;
         }
 
     </style>
@@ -38,30 +42,33 @@
     <div class="container">
         <div class="row">
             <div id="useEditR" class="col-lg-10 col-lg-push-1">
-                <h1>Reset password</h1>
+                <h1>Reset email</h1>
                 <div id="editBoxReset" class="form-group">
-                    <div id="keyInvalid">
-                    You do not have a valid password reset key. Request one by visiting the 'Edit profile' tab. 
+                    <div id="emkeyInvalid">
+                    You do not have a valid email reset key. Request one by visiting the 'Edit profile' tab. 
                     </div>
-                    <div id="pwNoMatch">
-                    Your passwords do not match.
+                    <div id="emNoMatch">
+                    Your emails do not match.
                     </div>
-                    <div id="noProfile">
+                    <div id="emnoProfile">
                     Your user profile was not found.
                     </div>
-                    <form method="post" enctype="multipart/form-data" action="pwchange.php">
+                    <div id="emTaken">
+                    The email address you entered is already in our system.
+                    </div>
+                    <form method="post" enctype="multipart/form-data" action="emchange.php">
                         <label>
-                        Email address:
+                        Current email address:
                         </label>
-                        <input type="text" name="em">
+                        <input type="email" name="em">
                         <label>
-                        New password:
+                        New email address:
                         </label>
-                        <input type="password" name="pw">
+                        <input type="email" name="newem">
                         <label>
-                        Confirm password:
+                        Confirm new email:
                         </label>
-                        <input type="password" name="confirmpw">
+                        <input type="email" name="confirmem">
                         <input type="hidden" name="q" value="<?php
 if (isset($_GET["q"])) {
 
@@ -69,7 +76,7 @@ if (isset($_GET["q"])) {
 
 }
 
-echo '" /><br><input class="btn btn-default" type="submit" name="ResetPasswordForm" value="Reset Password" /></form></div></div></div></div>'; ?>
+echo '" /><br><input class="btn btn-default" type="submit" name="ResetEmailForm" value="Reset Email" /></form></div></div></div></div>'; ?>
 
 
     <?php require_once "footer.php"; ?>

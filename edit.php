@@ -5,7 +5,7 @@
     $p = file("Users/$u/profile.txt");
     $b = $p[1];
 
-        if ($u == null) {
+    if ($u == null) {
         header('location: landing.php');
     }
 
@@ -21,6 +21,26 @@
     <style>
         #editError {
             display: <?php echo($_SESSION['editerror']);
+            ?>;
+        }
+        
+        #useEdit #pwreset #emFail {
+            display: <?php echo($_SESSION['emFail']);
+            ?>;
+        }
+        
+        #useEdit #pwreset {
+            display: <?php echo($_SESSION['emFail']);
+            ?>;
+        }
+        
+        #useEdit #resetSent {
+            display: <?php echo($_SESSION['resetSent']);
+            ?>;
+        }
+        
+        #useEdit #pwreset {
+            display: <?php echo($_SESSION['resetSent']);
             ?>;
         }
 
@@ -62,21 +82,34 @@
                             <h2>Edit private info</h2>
                             <h3 id="pwShow">Reset password</h3>
                             <form method="post" action="pwreset.php" enctype="multipart/form-data" id="pwreset">
+                                <div id="emFail">
+                                We were unable to find the email address you entered.
+                                </div>
                                 <label for="emrecovpw">
                                 Enter your email address to change your current password, then check your email for password reset instructions:
                                 </label><br>
                                 <input type="text" name="emrecovpw">
                                 <button type="submit" name="emrecovSubmit" class="btn btn-default">Submit
                                 </button>
+                                <div id="resetSent">
+                                Check your email for password reset instructions.
+                                </div>
                             </form>
+                            <br>
                             <h3 id="emShow">Change email</h3>
                             <form method="post" action="emreset.php" enctype="multipart/form-data" id="emreset">
+                                <div id="recovEmInvalid">
+                                The address you entered is not in our records.
+                                </div>
                                 <label for="emrecovem">
-                                Enter your current email address:
+                                Enter your current email address, then check your inbox for reset instructions:
                                 </label><br>
                                 <input type="text" name="emrecovem">
-                                <button type="submit"  class="btn btn-default">Submit
+                                <button type="submit"  class="btn btn-default" name="emrecovemSubmit">Submit
                                 </button>
+                                <div id="emResetSent">
+                                Check your email for reset instructions.
+                                </div>
                             </form>
                         </div>
                 </div>

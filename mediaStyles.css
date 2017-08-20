@@ -26,10 +26,10 @@
     margin-left: 70%; }
 
   #bigun #mainContent {
-    margin-top: 0px; }
+    margin: 55px 30px 15px 30px; }
     #bigun #mainContent .profile {
       border-right: 0px;
-      padding-bottom: 25px; }
+      padding-bottom: 15px; }
       #bigun #mainContent .profile .userPhoto {
         position: absolute;
         bottom: -10px;
@@ -39,6 +39,8 @@
         top: auto;
         bottom: 10px;
         right: 5%; }
+    #bigun #mainContent .cardCol {
+      margin-top: 70px; }
 
   #useEdit #editBox #formBigFlex {
     display: block; }
@@ -62,7 +64,7 @@
     width: 290px; }
 
   .profileCol {
-    margin: 10px auto;
+    margin: 40px auto;
     padding-bottom: 10px;
     border-right: none;
     border-bottom: 2px solid #666666;
@@ -134,16 +136,24 @@
   #useEdit #editBox #picBox label .overlay .text {
     left: 33%; } }
 @media (max-width: 667px) {
-  #bigun #mainContent .profile .userPhoto {
-    position: absolute;
-    right: 31%; } }
+  #bigun #mainContent {
+    margin: 20px 5px; }
+    #bigun #mainContent .profile .userPhoto {
+      position: absolute;
+      right: 31%; }
+    #bigun #mainContent .cardCol {
+      padding: 0px; } }
 @media (max-width: 640px) {
   #navLarge #navMobile {
     padding-top: 0px; } }
 @media (max-width: 568px) {
-  #bigun #mainContent .profile .userPhoto {
-    position: absolute;
-    right: 34%; }
+  #bigun #mainContent {
+    margin: 10px 0px; }
+    #bigun #mainContent .profile .userPhoto {
+      position: absolute;
+      right: 37%;
+      height: 120px;
+      width: 120px; }
 
   #resumeBox {
     margin-top: 50px; }
@@ -235,6 +245,11 @@
 @media (max-width: 320px) {
   #navLarge form {
     margin: 60px 0px 0px 0px; }
+  #navLarge .navbar-header {
+    width: 120px;
+    margin-left: 100px;
+    display: block;
+    position: absolute; }
 
   #useEdit #editBox #picBox label .overlay {
     height: 60px; }
@@ -247,6 +262,27 @@
   #bigun #mainContent .profile h2 {
     font-size: 35px; }
   #bigun #mainContent .profile #pizzaScoreContainer {
-    margin-top: -130px; } }
+    position: absolute;
+    left: 15px;
+    bottom: -120px; }
+  #bigun #mainContent .profile .cardAddBtn {
+    display: none; }
+  #bigun #mainContent .cardCol {
+    margin-top: 170px; }
+
+  #picBox, #editFlex, #btnHolder {
+    padding: 15px 0px; }
+
+  #useEdit h1, #useEdit h2 {
+    text-align: center; }
+  #useEdit #editBox #btnHolder {
+    margin: 0px 0px 15px 0px;
+    width: 90%; }
+    #useEdit #editBox #btnHolder button {
+      display: block;
+      margin: 10px auto; }
+
+  #pwResetHolder #pwShow, #pwResetHolder #emShow {
+    text-align: center; } }
 
 /*# sourceMappingURL=mediaStyles.css.map */

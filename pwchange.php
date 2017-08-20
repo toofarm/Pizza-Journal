@@ -38,15 +38,21 @@ if (isset($_POST["ResetPasswordForm"])) {
                 header('location: landing.php');
                 
             } else {
-                echo "User profile not found";
+                $_SESSION["noProfile"] = "block";
+                
+                header('location: reset.php');
             }
             
         } else {
-            echo "Your passwords do not match";
+            $_SESSION["pwNoMatch"] = "block";
+            
+            header('location:reset.php');
         }
         
     } else {
-        echo "Your password reset key is invalid";
+        $_SESSION["keyInvalid"] = "block";
+        
+        header('location: reset.php');
     }
 }
 

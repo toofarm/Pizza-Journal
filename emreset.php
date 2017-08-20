@@ -2,14 +2,14 @@
 
 $c = mysqli_connect("localhost", "fssa", "Webdevfun1!", "fssa");
 
-if (isset($_POST['emrecovSubmit'])) {
+if (isset($_POST['emrecovemSubmit'])) {
     
 //    Checks if email is valid email
-    if (filter_var($_POST["emrecovpw"], FILTER_VALIDATE_EMAIL)) { 
-        $email = $_POST["emrecovpw"];
+    if (filter_var($_POST["emrecovem"], FILTER_VALIDATE_EMAIL)) { 
+        $email = $_POST["emrecovem"];
     } else {
         
-        $_SESSION["emFail"] = "block";
+        $_SESSION["recovEmInvalid"] = "block";
         
         header('location: edit.php');
     }
@@ -29,12 +29,12 @@ if (isset($_POST['emrecovSubmit'])) {
         
         $password = hash('sha512', $salt.$email);
         
-        $pwurl = "http://citytechcedev.org/fssa/sdanaher/reset.php?q=".$password;
+        $pwurl = "http://citytechcedev.org/fssa/sdanaher/emreset.php?q=".$password;
         
         $mailbody = 
         "Hi there. If this email does not apply to you, please ignore it.
         
-        It appears that you have requested a password reset from Pizza Journal. To reset your password, please follow the link below. DO NOT SHARE THIS LINK WITH ANYONE ELSE.
+        It appears that you have requested an email reset from Pizza Journal. To reset the email address for your Pizza Journal account, please follow the link below. DO NOT SHARE THIS LINK WITH ANYONE ELSE.
         
         If you feel that you have received this message in error, please email pizzajournal@gmail.com.
         
@@ -43,7 +43,7 @@ if (isset($_POST['emrecovSubmit'])) {
         Best regards,
         Pizza Journal";
         
-        $s = "Your password reset request from Pizza Journal";
+        $s = "Your email address reset request from Pizza Journal";
 
         $t = "pizzajournal@gmail.com";
 
@@ -54,13 +54,13 @@ if (isset($_POST['emrecovSubmit'])) {
         
         $_SESSION["resetSent"] = "block";
         
-        $_SESSION["emFail"] = "none";
+        $_SESSION["recovEmInvalid"] = "none";
         
         header('location: edit.php');
     
     } else {
         
-        $_SESSION["emFail"] = "block";
+        $_SESSION["recovEmInvalid"] = "block";
         
         header('location: edit.php');
     

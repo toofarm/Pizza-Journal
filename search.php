@@ -1,5 +1,15 @@
 <?php session_start();
 
+    $u = $_SESSION["user"];
+    $i = $_SESSION["img"];
+    $p = file("Users/$u/profile.txt");
+    $b = $p[1];
+
+    if ($u == null) {
+        header('location: landing.php');
+    }
+
+
 if (isset($_POST['search'])) {
     $_SESSION["q"] = $q = $_POST["query"];
 //    print_r($q);

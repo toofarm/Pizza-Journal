@@ -45,8 +45,9 @@
             
             $_SESSION['error'] = "block";
             
+                
             header('location: landing.php');
-            
+                
             }
         }
         

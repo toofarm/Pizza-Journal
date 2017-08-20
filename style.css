@@ -77,9 +77,11 @@ body {
       background-color: #de9939; }
     #navLarge #navMobile li {
       padding: 0px 25px;
-      margin: 0px 10px; }
+      margin: 0px 10px;
+      list-style: none; }
       #navLarge #navMobile li ul {
-        font-size: 25px; }
+        font-size: 25px;
+        list-style: none; }
         #navLarge #navMobile li ul a {
           color: #666666;
           padding: 10px; }
@@ -446,7 +448,7 @@ footer {
         font-style: italic;
         font-size: 17px;
         text-align: center;
-        margin: 10px 8px;
+        margin: 10px 0px;
         display: none; }
       #loginBox #register #regBiz #emTaken {
         color: red;
@@ -454,10 +456,10 @@ footer {
         font-style: italic;
         font-size: 17px;
         text-align: center;
-        margin: 10px 8px;
+        margin: 10px 0px;
         display: none; }
       #loginBox #register #regBiz #regForm {
-        padding: 15px; }
+        padding: 15px 40px; }
         #loginBox #register #regBiz #regForm #failure2 {
           text-align: center;
           font-family: "Abel", "sans-serif";
@@ -469,6 +471,8 @@ footer {
           font-family: "Lato", "sans-serif";
           font-size: 30px;
           color: #666666; }
+        #loginBox #register #regBiz #regForm input {
+          text-align: center; }
         #loginBox #register #regBiz #regForm button {
           font-size: 20px;
           color: #666666;
@@ -477,20 +481,23 @@ footer {
     display: none;
     background-color: #fff; }
     #loginBox #loginBiz #logForm {
-      padding: 15px; }
+      padding: 15px 40px; }
       #loginBox #loginBiz #logForm label {
         font-family: "Lato", "sans-serif";
         font-size: 30px;
         color: #666666; }
+      #loginBox #loginBiz #logForm input {
+        text-align: center; }
       #loginBox #loginBiz #logForm button {
         font-size: 20px;
         color: #666666;
         font-family: "Lato", "sans-serif"; }
   #loginBox #landingFoot {
     height: auto;
-    padding: 15px 35px;
+    padding: 15px 40px;
     font-family: "Abel", "sans-serif";
-    font-size: 15px; }
+    font-size: 15px;
+    text-align: center; }
     #loginBox #landingFoot h4 {
       color: #666666;
       font-family: "Lato", "sans-serif"; }
@@ -571,8 +578,9 @@ footer {
   margin-bottom: 20px; }
   .pizzaCard h2 {
     font-family: "Lato", "sans-serif";
+    font-size: 35px;
     margin: 15px 0px 0px 15px;
-    text-decoration: underline; }
+    font-kerning: 5em; }
   .pizzaCard .cardFlex {
     display: flex;
     flex-flow: row wrap; }
@@ -595,13 +603,13 @@ footer {
       font-size: 23px;
       max-width: 250px; }
     .pizzaCard .cardFlex .rankings {
-      margin-left: 15px;
-      max-width: 300px; }
+      margin-left: 15px; }
       .pizzaCard .cardFlex .rankings .rankBox {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        justify-content: space-around; }
+        justify-content: space-around;
+        padding: 10px; }
         .pizzaCard .cardFlex .rankings .rankBox .rankItem {
           width: 75px;
           display: flex;
@@ -634,7 +642,8 @@ footer {
         font-size: 20px;
         height: 60px; }
     .pizzaCard .cardFlex .useCom {
-      min-width: 200px;
+      width: 100%;
+      padding: 7px;
       margin: 15px; }
       .pizzaCard .cardFlex .useCom .comment {
         border: 2px solid #ffb042;
@@ -729,7 +738,8 @@ ul.ui-autocomplete.ui-menu {
       font-size: 36px; }
     #useEdit #editBox h3 {
       padding: 8px 0px;
-      font-size: 30px; }
+      font-size: 30px;
+      display: inline-block; }
     #useEdit #editBox h3:hover {
       cursor: pointer;
       color: #666666; }
@@ -819,24 +829,55 @@ ul.ui-autocomplete.ui-menu {
         font-size: 20px;
         font-family: "Abel", "sans-serif"; }
   #useEdit #emreset, #useEdit #pwreset {
-    display: none; }
-
-#useEditR #editBoxReset {
-  border-top: 2px solid #666666;
-  padding: 15px; }
-  #useEditR #editBoxReset h1 {
-    color: #666666; }
-  #useEditR #editBoxReset label {
-    font-size: 27px;
+    display: none;
+    font-size: 20px;
+    color: #444; }
+  #useEdit #emFail, #useEdit #emInvalid, #useEdit #recovEmInvalid {
+    color: red;
     font-family: "Abel", "sans-serif";
-    display: block; }
-  #useEditR #editBoxReset input {
-    border-radius: 3px;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    margin: 10px 0px;
+    display: none;
+    text-align: left; }
+  #useEdit #resetSent {
+    display: none;
     font-size: 20px;
-    margin: 10px 0px; }
-  #useEditR #editBoxReset button {
-    display: block;
-    font-size: 20px;
-    margin: 10px 0px; }
+    color: #444;
+    font-style: italic;
+    margin: 15px 0px; }
+  #useEdit #emResetSent {
+    display: none;
+    margin: 15px auto; }
+
+#useEditR {
+  margin-top: 70px; }
+  #useEditR #editBoxReset {
+    border-top: 2px solid #666666;
+    padding: 15px 0px; }
+    #useEditR #editBoxReset h1 {
+      color: #666666; }
+    #useEditR #editBoxReset label {
+      font-size: 27px;
+      font-family: "Abel", "sans-serif";
+      display: block; }
+    #useEditR #editBoxReset input {
+      border-radius: 3px;
+      font-size: 20px;
+      margin: 10px 0px; }
+    #useEditR #editBoxReset button {
+      display: block;
+      font-size: 20px;
+      margin: 10px 0px; }
+    #useEditR #editBoxReset #keyInvalid, #useEditR #editBoxReset #pwNoMatch, #useEditR #editBoxReset #noProfile, #useEditR #editBoxReset #emkeyInvalid, #useEditR #editBoxReset #emNoMatch, #useEditR #editBoxReset #emnoProfile, #useEditR #editBoxReset #emTaken {
+      color: red;
+      font-family: "Abel", "sans-serif";
+      font-style: italic;
+      font-size: 17px;
+      text-align: center;
+      margin: 10px 0px;
+      display: none;
+      text-align: left; }
 
 /*# sourceMappingURL=style.css.map */

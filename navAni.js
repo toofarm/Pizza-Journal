@@ -15,7 +15,7 @@ function navResize() {
     }
 
     //This bit makes the profile bar sticky on scroll
-    if (w > 1230 && $("#welcome").css("display") == "none") {
+    if (w > 1320 && $("#welcome").css("display") == "none") {
 
         if ($(window).scrollTop() > 176) {
             $(".profile").css("position", "fixed").animate({
@@ -78,8 +78,6 @@ $('#emTrigger').click(function () {
 //    Mobile nav slidedown
 
 $("#navMobile").click(function () {
-    
-    console.log("what is happening here?");
 
     //        if (w < 480) {
         if ($("#mob-nav-dropdown").css("display") == "none") {

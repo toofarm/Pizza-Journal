@@ -272,7 +272,7 @@
                         if (v.user == "<?php echo $u ?>") {
                             $("#pcHolder").prepend('<div class="pizzaCard" id="' + v.globeid + '" data-score="' + v.score + '" data-date="' + v.date + '"></div>');
 
-                            $("#" + v.globeid + "").append('<h2 class="pizzaTitle"> <span class="pizzaName">' + v.pizzaname + '</span> - <span class="pizzaScore">' + v.score + '</span></h2>');
+                            $("#" + v.globeid + "").append('<h2 class="pizzaTitle"> <span class="pizzaName">' + v.pizzaname + '</span> &nbsp; -  &nbsp; <span class="pizzaScore">' + v.score + '</span></h2>');
 
 
                             $("#" + v.globeid + "").append('<div class="cardFlex"></div>');
